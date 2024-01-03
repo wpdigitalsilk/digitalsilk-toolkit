@@ -13,6 +13,7 @@
     "bin": {
         "digitalsilk-toolkit": "bin/digitalsilk-toolkit.js"
     },
+
     "dependencies": {
         "@babel/core": "^7.21.8",
         "@babel/eslint-parser": "^7.21.8",
