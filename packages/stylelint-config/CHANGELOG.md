@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.3.0
+
+### Minor Changes
+
+- Bump version - test
+
+### Patch Changes
+
+- Updated dependencies
+  - @digitalsilk/eslint-config@0.3.0
+
 ## 0.2.0
 
 ### Minor Changes

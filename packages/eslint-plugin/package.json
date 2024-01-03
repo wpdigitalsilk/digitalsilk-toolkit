@@ -1,6 +1,6 @@
 {
     "name": "@digitalsilk/eslint-plugin",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "description": "ESLint plugin for WordPress development.",
     "author": "Digital Silk",
     "license": "GPL-2.0-or-later",
@@ -43,8 +43,8 @@
         "eslint-plugin-react": "^7.32.2",
         "globals": "^13.20.0",
         "requireindex": "^1.2.0",
-        "@digitalsilk/babel-preset-default": "^0.2.0",
-        "@digitalsilk/eslint-config": "^0.2.0",
+        "@digitalsilk/babel-preset-default": "^0.3.0",
+        "@digitalsilk/eslint-config": "^0.3.0",
         "@babel/core": ">=7",
         "eslint": ">=8"
     },

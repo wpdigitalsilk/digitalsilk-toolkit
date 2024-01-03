@@ -1,5 +1,17 @@
 # @digitalsilk/eslint-plugin
 
+## 0.3.0
+
+### Minor Changes
+
+- Bump version - test
+
+### Patch Changes
+
+- Updated dependencies
+  - @digitalsilk/babel-preset-default@0.3.0
+  - @digitalsilk/eslint-config@0.3.0
+
 ## 0.2.0
 
 ### Minor Changes
