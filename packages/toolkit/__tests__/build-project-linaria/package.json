@@ -1,0 +1,9 @@
+{
+    "name": "test-build-project-linaria",
+    "digitalsilk-toolkit": {
+        "useBlockAssets": true,
+        "paths": {
+            "blocksDir": "./__fixtures__/includes/blocks"
+        }
+    }
+}

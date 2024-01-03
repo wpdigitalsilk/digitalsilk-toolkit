@@ -1,0 +1,28 @@
+{
+    "name": "@digitalsilk/toolkit",
+    "private": true,
+    "author": "Digital Silk",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/wpdigitalsilk/digitalsilk-toolkit.git"
+    },
+    "scripts": {
+        "build": "npm run build --workspaces --if-present",
+        "test": "npm run test --workspaces --if-present",
+        "lint": "npm run lint --workspaces --if-present",
+        "dev": "npm run wp-env start -w=projects/ds-theme -- --xdebug  && npm run start -w=projects/ds-theme",
+        "package": "changeset && changeset version && changeset publish"
+    },
+    "workspaces": [
+        "packages/*"
+    ],
+    "bundleDependencies": false,
+    "description": "Collection of reusable scripts for development.",
+    "engines": {
+        "node": ">=14",
+        "npm": ">=7"
+    },
+    "devDependencies": {
+        "@changesets/cli": "^2.27.1"
+    }
+}
