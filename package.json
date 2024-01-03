@@ -11,7 +11,8 @@
         "test": "npm run test --workspaces --if-present",
         "lint": "npm run lint --workspaces --if-present",
         "dev": "npm run wp-env start -w=projects/ds-theme -- --xdebug  && npm run start -w=projects/ds-theme",
-        "package": "changeset && changeset version && changeset publish"
+        "publish:packages": "changeset && changeset version && changeset publish",
+        "publish:prepare": "changeset && changeset version"
     },
     "workspaces": [
         "packages/*"
