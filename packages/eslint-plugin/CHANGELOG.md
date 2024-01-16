@@ -1,5 +1,17 @@
 # @digitalsilk/eslint-plugin
 
+## 0.4.0
+
+### Minor Changes
+
+- SVG Sprite
+
+### Patch Changes
+
+- Updated dependencies
+  - @digitalsilk/babel-preset-default@0.4.0
+  - @digitalsilk/eslint-config@0.4.0
+
 ## 0.3.0
 
 ### Minor Changes

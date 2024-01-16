@@ -13,6 +13,8 @@ const RemoveEmptyScriptsPlugin = require("./plugins/remove-empty-scripts");
 const CleanExtractedDeps = require("./plugins/clean-extracted-deps");
 const DSToolkitTscPlugin = require("./plugins/tsc");
 const NoBrowserSyncPlugin = require("./plugins/no-browser-sync");
+const SVGSpritemapPlugin = require("svg-spritemap-webpack-plugin");
+
 
 const {
 	hasStylelintConfig,
@@ -202,6 +204,10 @@ module.exports = ({
 				configFile: fromConfigRoot("stylelint.config.js"),
 			}),
 		}),
+
+		// SVG Sprite
+		new SVGSpritemapPlugin("./assets/svg-icons/*.svg"),
+
 		// Fancy WebpackBar.
 		!hasReactFastRefresh && new WebpackBar(webpackbarArguments),
 		// dependencyExternals variable controls whether scripts' assets get
