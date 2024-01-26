@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.7.0
+
+### Minor Changes
+
+- Cleanup
+
+### Patch Changes
+
+- Updated dependencies
+  - @digitalsilk/eslint-config@0.7.0
+
 ## 0.6.0
 
 ### Minor Changes

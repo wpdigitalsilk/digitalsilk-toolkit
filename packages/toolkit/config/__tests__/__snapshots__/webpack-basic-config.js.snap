@@ -30,18 +30,6 @@ Object {
               "cacheDirectory": true,
             },
           },
-          Object {
-            "loader": "@linaria/webpack-loader",
-            "options": Object {
-              "babelOptions": Object {},
-              "extension": ".linaria.module.css",
-              "overrideContext": context => ({
-            ...context,
-            $RefreshReg$: () => {}
-          }),
-              "sourceMap": true,
-            },
-          },
         ],
       },
       Object {
@@ -74,6 +62,7 @@ Object {
               "postcssOptions": Object {},
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       Object {
@@ -102,9 +91,11 @@ Object {
           Object {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": Object {
+              "sassOptions": Object {},
               "sourceMap": true,
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       Object {
@@ -134,9 +125,11 @@ Object {
           Object {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": Object {
+              "sassOptions": Object {},
               "sourceMap": true,
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       Object {
@@ -178,6 +171,7 @@ Object {
     ESLintWebpackPlugin: {"extensions":"js","emitError":true,"emitWarning":true,"failOnError":false,"resourceQueryExclude":[],"fix":false,"lintDirtyModulesOnly":true},
     MiniCssExtractPlugin: {"ignoreOrder":false,"runtime":true,"chunkFilename":"[id].css"},
     StylelintWebpackPlugin: {"cache":true,"cacheLocation":"node_modules/.cache/stylelint-webpack-plugin/.stylelintcache","extensions":["css","scss","sass"],"emitError":true,"emitWarning":true,"failOnError":false,"context":"/assets","files":"**/*.(s(c|a)ss|css)","allowEmptyInput":true,"lintDirtyModulesOnly":true},
+    SVGSpritemapPlugin: {"input":{"options":{},"allowDuplicates":false,"patterns":["./assets/icons/*.svg"]},"output":{"filename":"spritemap.svg","svg":{"sizes":false,"attributes":{}},"chunk":{"name":"spritemap","keep":false},"svg4everybody":false,"svgo":{"plugins":[]}},"sprite":{"prefix":"sprite-","prefixStylesSelectors":false,"gutter":0,"generate":{"title":true,"symbol":true,"use":false,"view":false}},"styles":false},
     WebpackBarPlugin: {"name":"webpack","color":"green","reporters":["basic"],"reporter":null},
     CleanExtractedDeps: {},
     WebpackRemoveEmptyScriptsPlugin: {"enabled":true,"verbose":false,"extensions":{},"ignore":[],"remove":{}},
@@ -236,18 +230,6 @@ Object {
               "cacheDirectory": true,
             },
           },
-          Object {
-            "loader": "@linaria/webpack-loader",
-            "options": Object {
-              "babelOptions": Object {},
-              "extension": ".linaria.module.css",
-              "overrideContext": context => ({
-            ...context,
-            $RefreshReg$: () => {}
-          }),
-              "sourceMap": true,
-            },
-          },
         ],
       },
       Object {
@@ -280,6 +262,7 @@ Object {
               "postcssOptions": Object {},
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       Object {
@@ -308,9 +291,11 @@ Object {
           Object {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": Object {
+              "sassOptions": Object {},
               "sourceMap": true,
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       Object {
@@ -340,9 +325,11 @@ Object {
           Object {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": Object {
+              "sassOptions": Object {},
               "sourceMap": true,
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       Object {
@@ -391,6 +378,7 @@ Object {
     MiniCssExtractPlugin: {"ignoreOrder":false,"runtime":true,"chunkFilename":"[id].css"},
     CopyPlugin: {},
     StylelintWebpackPlugin: {"cache":true,"cacheLocation":"node_modules/.cache/stylelint-webpack-plugin/.stylelintcache","extensions":["css","scss","sass"],"emitError":true,"emitWarning":true,"failOnError":false,"context":"/assets2","files":"**/*.(s(c|a)ss|css)","allowEmptyInput":true,"lintDirtyModulesOnly":true},
+    SVGSpritemapPlugin: {"input":{"options":{},"allowDuplicates":false,"patterns":["./assets/icons/*.svg"]},"output":{"filename":"spritemap.svg","svg":{"sizes":false,"attributes":{}},"chunk":{"name":"spritemap","keep":false},"svg4everybody":false,"svgo":{"plugins":[]}},"sprite":{"prefix":"sprite-","prefixStylesSelectors":false,"gutter":0,"generate":{"title":true,"symbol":true,"use":false,"view":false}},"styles":false},
     WebpackBarPlugin: {"name":"webpack","color":"green","reporters":["basic"],"reporter":null},
     DependencyExtractionWebpackPlugin: {"combineAssets":false,"combinedOutputFile":null,"externalizedReport":false,"injectPolyfill":false,"outputFormat":"php","outputFilename":null,"useDefaults":true},
     CleanExtractedDeps: {},
@@ -467,93 +455,8 @@ Object {
                     "wordpress": true,
                   },
                 ],
-                Array [
-                  "@linaria",
-                  Object {
-                    "babelOptions": Object {
-                      "babelrc": false,
-                      "configFile": false,
-                      "presets": Array [
-                        Array [
-                          "/packages/babel-preset-default/index.js",
-                          Object {
-                            "targets": Array [
-                              "> 1%",
-                              "Firefox ESR",
-                              "last 2 versions",
-                              "not ie <= 11",
-                              "not ie_mob <=11",
-                            ],
-                            "useBuiltIns": false,
-                            "wordpress": true,
-                          },
-                        ],
-                      ],
-                      "sourceType": "unambiguous",
-                    },
-                  },
-                ],
               ],
               "sourceType": "unambiguous",
-            },
-          },
-          Object {
-            "loader": "@linaria/webpack-loader",
-            "options": Object {
-              "babelOptions": Object {
-                "babelrc": false,
-                "configFile": false,
-                "plugins": Array [],
-                "presets": Array [
-                  Array [
-                    "/packages/babel-preset-default/index.js",
-                    Object {
-                      "targets": Array [
-                        "> 1%",
-                        "Firefox ESR",
-                        "last 2 versions",
-                        "not ie <= 11",
-                        "not ie_mob <=11",
-                      ],
-                      "useBuiltIns": false,
-                      "wordpress": true,
-                    },
-                  ],
-                  Array [
-                    "@linaria",
-                    Object {
-                      "babelOptions": Object {
-                        "babelrc": false,
-                        "configFile": false,
-                        "presets": Array [
-                          Array [
-                            "/packages/babel-preset-default/index.js",
-                            Object {
-                              "targets": Array [
-                                "> 1%",
-                                "Firefox ESR",
-                                "last 2 versions",
-                                "not ie <= 11",
-                                "not ie_mob <=11",
-                              ],
-                              "useBuiltIns": false,
-                              "wordpress": true,
-                            },
-                          ],
-                        ],
-                        "sourceType": "unambiguous",
-                      },
-                    },
-                  ],
-                ],
-                "sourceType": "unambiguous",
-              },
-              "extension": ".linaria.module.css",
-              "overrideContext": context => ({
-            ...context,
-            $RefreshReg$: () => {}
-          }),
-              "sourceMap": true,
             },
           },
         ],
@@ -590,6 +493,7 @@ Object {
               },
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       Object {
@@ -620,9 +524,11 @@ Object {
           Object {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": Object {
+              "sassOptions": Object {},
               "sourceMap": true,
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       Object {
@@ -654,9 +560,11 @@ Object {
           Object {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": Object {
+              "sassOptions": Object {},
               "sourceMap": true,
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       Object {
@@ -698,6 +606,7 @@ Object {
     ESLintWebpackPlugin: {"extensions":"js","emitError":true,"emitWarning":true,"failOnError":false,"resourceQueryExclude":[],"fix":false,"lintDirtyModulesOnly":true},
     MiniCssExtractPlugin: {"ignoreOrder":false,"runtime":true,"chunkFilename":"[id].css"},
     StylelintWebpackPlugin: {"cache":true,"cacheLocation":"node_modules/.cache/stylelint-webpack-plugin/.stylelintcache","extensions":["css","scss","sass"],"emitError":true,"emitWarning":true,"failOnError":false,"context":"/assets","files":"**/*.(s(c|a)ss|css)","allowEmptyInput":true,"lintDirtyModulesOnly":true,"configFile":"/config/stylelint.config.js"},
+    SVGSpritemapPlugin: {"input":{"options":{},"allowDuplicates":false,"patterns":["./assets/icons/*.svg"]},"output":{"filename":"spritemap.svg","svg":{"sizes":false,"attributes":{}},"chunk":{"name":"spritemap","keep":false},"svg4everybody":false,"svgo":{"plugins":[]}},"sprite":{"prefix":"sprite-","prefixStylesSelectors":false,"gutter":0,"generate":{"title":true,"symbol":true,"use":false,"view":false}},"styles":false},
     WebpackBarPlugin: {"name":"webpack","color":"green","reporters":["basic"],"reporter":null},
     CleanExtractedDeps: {},
     WebpackRemoveEmptyScriptsPlugin: {"enabled":true,"verbose":false,"extensions":{},"ignore":[],"remove":{}},
@@ -773,93 +682,8 @@ Object {
                     "wordpress": true,
                   },
                 ],
-                Array [
-                  "@linaria",
-                  Object {
-                    "babelOptions": Object {
-                      "babelrc": false,
-                      "configFile": false,
-                      "presets": Array [
-                        Array [
-                          "/packages/babel-preset-default/index.js",
-                          Object {
-                            "targets": Array [
-                              "> 1%",
-                              "Firefox ESR",
-                              "last 2 versions",
-                              "not ie <= 11",
-                              "not ie_mob <=11",
-                            ],
-                            "useBuiltIns": false,
-                            "wordpress": true,
-                          },
-                        ],
-                      ],
-                      "sourceType": "unambiguous",
-                    },
-                  },
-                ],
               ],
               "sourceType": "unambiguous",
-            },
-          },
-          Object {
-            "loader": "@linaria/webpack-loader",
-            "options": Object {
-              "babelOptions": Object {
-                "babelrc": false,
-                "configFile": false,
-                "plugins": Array [],
-                "presets": Array [
-                  Array [
-                    "/packages/babel-preset-default/index.js",
-                    Object {
-                      "targets": Array [
-                        "> 1%",
-                        "Firefox ESR",
-                        "last 2 versions",
-                        "not ie <= 11",
-                        "not ie_mob <=11",
-                      ],
-                      "useBuiltIns": false,
-                      "wordpress": true,
-                    },
-                  ],
-                  Array [
-                    "@linaria",
-                    Object {
-                      "babelOptions": Object {
-                        "babelrc": false,
-                        "configFile": false,
-                        "presets": Array [
-                          Array [
-                            "/packages/babel-preset-default/index.js",
-                            Object {
-                              "targets": Array [
-                                "> 1%",
-                                "Firefox ESR",
-                                "last 2 versions",
-                                "not ie <= 11",
-                                "not ie_mob <=11",
-                              ],
-                              "useBuiltIns": false,
-                              "wordpress": true,
-                            },
-                          ],
-                        ],
-                        "sourceType": "unambiguous",
-                      },
-                    },
-                  ],
-                ],
-                "sourceType": "unambiguous",
-              },
-              "extension": ".linaria.module.css",
-              "overrideContext": context => ({
-            ...context,
-            $RefreshReg$: () => {}
-          }),
-              "sourceMap": true,
             },
           },
         ],
@@ -896,6 +720,7 @@ Object {
               },
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       Object {
@@ -926,9 +751,11 @@ Object {
           Object {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": Object {
+              "sassOptions": Object {},
               "sourceMap": true,
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       Object {
@@ -960,9 +787,11 @@ Object {
           Object {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": Object {
+              "sassOptions": Object {},
               "sourceMap": true,
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       Object {
@@ -1004,6 +833,7 @@ Object {
     ESLintWebpackPlugin: {"extensions":"js","emitError":true,"emitWarning":true,"failOnError":false,"resourceQueryExclude":[],"fix":false,"lintDirtyModulesOnly":true},
     MiniCssExtractPlugin: {"ignoreOrder":false,"runtime":true,"chunkFilename":"[id].css"},
     StylelintWebpackPlugin: {"cache":true,"cacheLocation":"node_modules/.cache/stylelint-webpack-plugin/.stylelintcache","extensions":["css","scss","sass"],"emitError":true,"emitWarning":true,"failOnError":false,"context":"/assets","files":"**/*.(s(c|a)ss|css)","allowEmptyInput":true,"lintDirtyModulesOnly":true,"configFile":"/config/stylelint.config.js"},
+    SVGSpritemapPlugin: {"input":{"options":{},"allowDuplicates":false,"patterns":["./assets/icons/*.svg"]},"output":{"filename":"spritemap.svg","svg":{"sizes":false,"attributes":{}},"chunk":{"name":"spritemap","keep":false},"svg4everybody":false,"svgo":{"plugins":[]}},"sprite":{"prefix":"sprite-","prefixStylesSelectors":false,"gutter":0,"generate":{"title":true,"symbol":true,"use":false,"view":false}},"styles":false},
     WebpackBarPlugin: {"name":"webpack","color":"green","reporters":["basic"],"reporter":null},
     CleanExtractedDeps: {},
     WebpackRemoveEmptyScriptsPlugin: {"enabled":true,"verbose":false,"extensions":{},"ignore":[],"remove":{}},
@@ -1080,93 +910,8 @@ Object {
                     "wordpress": true,
                   },
                 ],
-                Array [
-                  "@linaria",
-                  Object {
-                    "babelOptions": Object {
-                      "babelrc": false,
-                      "configFile": false,
-                      "presets": Array [
-                        Array [
-                          "/packages/babel-preset-default/index.js",
-                          Object {
-                            "targets": Array [
-                              "> 1%",
-                              "Firefox ESR",
-                              "last 2 versions",
-                              "not ie <= 11",
-                              "not ie_mob <=11",
-                            ],
-                            "useBuiltIns": false,
-                            "wordpress": true,
-                          },
-                        ],
-                      ],
-                      "sourceType": "unambiguous",
-                    },
-                  },
-                ],
               ],
               "sourceType": "unambiguous",
-            },
-          },
-          Object {
-            "loader": "@linaria/webpack-loader",
-            "options": Object {
-              "babelOptions": Object {
-                "babelrc": false,
-                "configFile": false,
-                "plugins": Array [],
-                "presets": Array [
-                  Array [
-                    "/packages/babel-preset-default/index.js",
-                    Object {
-                      "targets": Array [
-                        "> 1%",
-                        "Firefox ESR",
-                        "last 2 versions",
-                        "not ie <= 11",
-                        "not ie_mob <=11",
-                      ],
-                      "useBuiltIns": false,
-                      "wordpress": true,
-                    },
-                  ],
-                  Array [
-                    "@linaria",
-                    Object {
-                      "babelOptions": Object {
-                        "babelrc": false,
-                        "configFile": false,
-                        "presets": Array [
-                          Array [
-                            "/packages/babel-preset-default/index.js",
-                            Object {
-                              "targets": Array [
-                                "> 1%",
-                                "Firefox ESR",
-                                "last 2 versions",
-                                "not ie <= 11",
-                                "not ie_mob <=11",
-                              ],
-                              "useBuiltIns": false,
-                              "wordpress": true,
-                            },
-                          ],
-                        ],
-                        "sourceType": "unambiguous",
-                      },
-                    },
-                  ],
-                ],
-                "sourceType": "unambiguous",
-              },
-              "extension": ".linaria.module.css",
-              "overrideContext": context => ({
-            ...context,
-            $RefreshReg$: () => {}
-          }),
-              "sourceMap": true,
             },
           },
         ],
@@ -1203,6 +948,7 @@ Object {
               },
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       Object {
@@ -1233,9 +979,11 @@ Object {
           Object {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": Object {
+              "sassOptions": Object {},
               "sourceMap": true,
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       Object {
@@ -1267,9 +1015,11 @@ Object {
           Object {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": Object {
+              "sassOptions": Object {},
               "sourceMap": true,
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       Object {
@@ -1311,6 +1061,7 @@ Object {
     ESLintWebpackPlugin: {"extensions":"js","emitError":true,"emitWarning":true,"failOnError":false,"resourceQueryExclude":[],"fix":false,"lintDirtyModulesOnly":true},
     MiniCssExtractPlugin: {"ignoreOrder":false,"runtime":true,"chunkFilename":"[id].css"},
     StylelintWebpackPlugin: {"cache":true,"cacheLocation":"node_modules/.cache/stylelint-webpack-plugin/.stylelintcache","extensions":["css","scss","sass"],"emitError":true,"emitWarning":true,"failOnError":false,"context":"/assets","files":"**/*.(s(c|a)ss|css)","allowEmptyInput":true,"lintDirtyModulesOnly":true,"configFile":"/config/stylelint.config.js"},
+    SVGSpritemapPlugin: {"input":{"options":{},"allowDuplicates":false,"patterns":["./assets/icons/*.svg"]},"output":{"filename":"spritemap.svg","svg":{"sizes":false,"attributes":{}},"chunk":{"name":"spritemap","keep":false},"svg4everybody":false,"svgo":{"plugins":[]}},"sprite":{"prefix":"sprite-","prefixStylesSelectors":false,"gutter":0,"generate":{"title":true,"symbol":true,"use":false,"view":false}},"styles":false},
     WebpackBarPlugin: {"name":"webpack","color":"green","reporters":["basic"],"reporter":null},
     CleanExtractedDeps: {},
     WebpackRemoveEmptyScriptsPlugin: {"enabled":true,"verbose":false,"extensions":{},"ignore":[],"remove":{}},
@@ -1385,93 +1136,8 @@ Object {
                     "wordpress": true,
                   },
                 ],
-                Array [
-                  "@linaria",
-                  Object {
-                    "babelOptions": Object {
-                      "babelrc": false,
-                      "configFile": false,
-                      "presets": Array [
-                        Array [
-                          "/packages/babel-preset-default/index.js",
-                          Object {
-                            "targets": Array [
-                              "> 1%",
-                              "Firefox ESR",
-                              "last 2 versions",
-                              "not ie <= 11",
-                              "not ie_mob <=11",
-                            ],
-                            "useBuiltIns": "usage",
-                            "wordpress": true,
-                          },
-                        ],
-                      ],
-                      "sourceType": "unambiguous",
-                    },
-                  },
-                ],
               ],
               "sourceType": "unambiguous",
-            },
-          },
-          Object {
-            "loader": "@linaria/webpack-loader",
-            "options": Object {
-              "babelOptions": Object {
-                "babelrc": false,
-                "configFile": false,
-                "plugins": Array [],
-                "presets": Array [
-                  Array [
-                    "/packages/babel-preset-default/index.js",
-                    Object {
-                      "targets": Array [
-                        "> 1%",
-                        "Firefox ESR",
-                        "last 2 versions",
-                        "not ie <= 11",
-                        "not ie_mob <=11",
-                      ],
-                      "useBuiltIns": "usage",
-                      "wordpress": true,
-                    },
-                  ],
-                  Array [
-                    "@linaria",
-                    Object {
-                      "babelOptions": Object {
-                        "babelrc": false,
-                        "configFile": false,
-                        "presets": Array [
-                          Array [
-                            "/packages/babel-preset-default/index.js",
-                            Object {
-                              "targets": Array [
-                                "> 1%",
-                                "Firefox ESR",
-                                "last 2 versions",
-                                "not ie <= 11",
-                                "not ie_mob <=11",
-                              ],
-                              "useBuiltIns": "usage",
-                              "wordpress": true,
-                            },
-                          ],
-                        ],
-                        "sourceType": "unambiguous",
-                      },
-                    },
-                  ],
-                ],
-                "sourceType": "unambiguous",
-              },
-              "extension": ".linaria.module.css",
-              "overrideContext": context => ({
-            ...context,
-            $RefreshReg$: () => {}
-          }),
-              "sourceMap": true,
             },
           },
         ],
@@ -1508,6 +1174,7 @@ Object {
               },
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       Object {
@@ -1538,9 +1205,11 @@ Object {
           Object {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": Object {
+              "sassOptions": Object {},
               "sourceMap": true,
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       Object {
@@ -1572,9 +1241,11 @@ Object {
           Object {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": Object {
+              "sassOptions": Object {},
               "sourceMap": true,
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       Object {
@@ -1624,6 +1295,7 @@ Object {
     CopyPlugin: {},
     NoBrowserSyncPlugin: {},
     StylelintWebpackPlugin: {"cache":true,"cacheLocation":"node_modules/.cache/stylelint-webpack-plugin/.stylelintcache","extensions":["css","scss","sass"],"emitError":true,"emitWarning":true,"failOnError":false,"context":"/assets2","files":"**/*.(s(c|a)ss|css)","allowEmptyInput":true,"lintDirtyModulesOnly":true,"configFile":"/config/stylelint.config.js"},
+    SVGSpritemapPlugin: {"input":{"options":{},"allowDuplicates":false,"patterns":["./assets/icons/*.svg"]},"output":{"filename":"spritemap.svg","svg":{"sizes":false,"attributes":{}},"chunk":{"name":"spritemap","keep":false},"svg4everybody":false,"svgo":{"plugins":[]}},"sprite":{"prefix":"sprite-","prefixStylesSelectors":false,"gutter":0,"generate":{"title":true,"symbol":true,"use":false,"view":false}},"styles":false},
     WebpackBarPlugin: {"name":"webpack","color":"green","reporters":["basic"],"reporter":null},
     DependencyExtractionWebpackPlugin: {"combineAssets":false,"combinedOutputFile":null,"externalizedReport":false,"injectPolyfill":false,"outputFormat":"php","outputFilename":null,"useDefaults":true},
     CleanExtractedDeps: {},

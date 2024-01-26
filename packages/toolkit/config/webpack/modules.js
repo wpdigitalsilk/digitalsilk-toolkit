@@ -97,19 +97,7 @@ module.exports = ({
 		  }
 		: {};
 
-	if (isPackageInstalled("@linaria/babel-preset") && !hasBabelConfig()) {
-		babelConfig.presets.push([
-			"@linaria",
-			{
-				babelOptions: {
-					babelrc: false,
-					configFile: false,
-					sourceType: "unambiguous",
-					presets: [...babelConfig.presets],
-				},
-			},
-		]);
-	}
+
 
 	return {
 		rules: [
@@ -129,21 +117,6 @@ module.exports = ({
 							// to enable more persistent caching.
 							cacheDirectory: process.env.BABEL_CACHE_DIRECTORY || true,
 							...babelConfig,
-						},
-					},
-					isPackageInstalled("@linaria/webpack-loader") && {
-						loader: "@linaria/webpack-loader",
-						options: {
-							sourceMap: process.env.NODE_ENV !== "production",
-							extension: LINARIA_EXTENSION,
-							// Fix $RefreshReg$ is not defined errors with linaria and react-fast-refresh
-							// another option is to disable react fast refresh in babel preset via api.caller
-							// @see https://github.com/callstack/linaria/issues/1308#issuecomment-1732385974
-							overrideContext: (context) => ({
-								...context,
-								$RefreshReg$: () => {},
-							}),
-							babelOptions: babelConfig,
 						},
 					},
 				].filter(Boolean),
