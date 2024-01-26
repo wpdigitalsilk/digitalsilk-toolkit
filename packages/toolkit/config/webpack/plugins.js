@@ -206,7 +206,7 @@ module.exports = ({
 		}),
 
 		// SVG Sprite
-		new SVGSpritemapPlugin("./assets/svg-icons/*.svg"),
+		new SVGSpritemapPlugin(paths.iconsDir +"*.svg"),
 
 		// Fancy WebpackBar.
 		!hasReactFastRefresh && new WebpackBar(webpackbarArguments),

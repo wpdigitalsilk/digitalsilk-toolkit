@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.5.0
+
+### Minor Changes
+
+- Update paths
+
+### Patch Changes
+
+- Updated dependencies
+  - @digitalsilk/babel-preset-default@0.5.0
+  - @digitalsilk/stylelint-config@0.5.0
+  - @digitalsilk/eslint-config@0.5.0
+
 ## 0.4.0
 
 ### Minor Changes

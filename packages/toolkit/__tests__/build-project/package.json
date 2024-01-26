@@ -6,7 +6,7 @@
             "admin": "./__fixtures__/assets/js/admin.js",
             "frontend": "./__fixtures__/assets/js/frontend.js",
             "frontend-css": "./__fixtures__/assets/css/frontend.css",
-            "example-block": "./__fixtures__/includes/blocks/example/index.js"
+            "example-block": "./__fixtures__/gutenberg/blocks/example/index.js"
         }
     }
 }

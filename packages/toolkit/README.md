@@ -113,7 +113,7 @@ Here's how a `package.json` would look like for using digitalsilk-toolkit this w
 		"devURL": "https://my-project.test",
 		"entry": {
 			"admin": "./assets/js/admin/admin.js",
-			"blocks": "./includes/blocks/blocks.js",
+			"blocks": "./gutenberg/blocks/blocks.js",
 			"frontend": "./assets/js/frontend/frontend.js",
 			"shared": "./assets/js/shared/shared.js",
 			"styleguide": "./assets/js/styleguide/styleguide.js",
@@ -122,8 +122,8 @@ Here's how a `package.json` would look like for using digitalsilk-toolkit this w
 			"shared-style": "./assets/css/shared/shared-style.css",
 			"style": "./assets/css/frontend/style.css",
 			"styleguide-style": "./assets/css/styleguide/styleguide.css",
-			"core-block-overrides": "./includes/core-block-overrides.js",
-			"example-block": "./includes/blocks/example-block/index.js"
+			"core-block-overrides": "./gutenberg/core-block-overrides.js",
+			"example-block": "./gutenberg/blocks/example-block/index.js"
 		}
 	}
 }
@@ -229,7 +229,7 @@ Since digitalsilk-toolkit@6 this mode is on by default. To opt out of this mode 
 }
 ```
 
-By default, the source directory for blocks is `./includes/blocks/`. This can be customized via the `blocksDir` key in the paths' config.
+By default, the source directory for blocks is `./gutenberg/blocks/`. This can be customized via the `blocksDir` key in the paths' config.
 
 ### WordPress Editor Styles
 
