@@ -9,7 +9,7 @@
         "url": "git+https://github.com/wpdigitalsilk/digitalsilk-toolkit.git",
         "directory": "packages/toolkit"
     },
-    "version": "0.7.0",
+    "version": "0.8.0",
     "bin": {
         "digitalsilk-toolkit": "bin/digitalsilk-toolkit.js"
     },
@@ -20,9 +20,9 @@
         "@svgr/webpack": "^8.0.1",
         "@typescript-eslint/eslint-plugin": "^5.59.6",
         "@typescript-eslint/parser": "^5.59.6",
-        "@digitalsilk/babel-preset-default": "^0.7.0",
-        "@digitalsilk/eslint-config": "^0.7.0",
-        "@digitalsilk/stylelint-config": "^0.7.0",
+        "@digitalsilk/babel-preset-default": "^0.8.0",
+        "@digitalsilk/eslint-config": "^0.8.0",
+        "@digitalsilk/stylelint-config": "^0.8.0",
         "@wordpress/dependency-extraction-webpack-plugin": "^4.16.0",
         "@wordpress/eslint-plugin": "^13.10.0",
         "@wordpress/jest-console": "^6.11.0",
