@@ -1,7 +1,7 @@
 module.exports = {
 	srcDir: "./assets/",
-	cssLoaderPaths: ["./assets/css", "./includes/blocks"],
+	cssLoaderPaths: ["./assets/css", "./gutenberg/blocks"],
 	copyAssetsDir: "./assets/",
-	blocksDir: "./includes/blocks/",
+	blocksDir: "./gutenberg/blocks/",
 	iconsDir: "./assets/icons/",
 };

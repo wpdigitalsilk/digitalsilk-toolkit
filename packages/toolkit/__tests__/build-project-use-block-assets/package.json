@@ -6,7 +6,7 @@
             "frontend": "./__fixtures__/assets/js/frontend.js"
         },
         "paths": {
-            "blocksDir": "./__fixtures__/includes/blocks"
+            "blocksDir": "./__fixtures__/gutenberg/blocks"
         }
     }
 }

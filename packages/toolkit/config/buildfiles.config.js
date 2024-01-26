@@ -1,6 +1,6 @@
 module.exports = {
 	admin: './assets/js/admin/admin.js',
-	blocks: './includes/blocks/blocks.js',
+	blocks: './gutenberg/blocks/blocks.js',
 	frontend: './assets/js/frontend/frontend.js',
 	shared: './assets/js/shared/shared.js',
 	styleguide: './assets/js/styleguide/styleguide.js',
