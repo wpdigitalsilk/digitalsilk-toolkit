@@ -1,6 +1,6 @@
 {
     "name": "@digitalsilk/stylelint-config",
-    "version": "0.7.0",
+    "version": "0.8.0",
     "description": "Digital Silk stylelint config for WordPress projects",
     "main": "index.js",
     "homepage": "https://github.com/wpdigitalsilk/digitalsilk-toolkit/tree/develop/packages/stylelint-config#readme",
@@ -38,11 +38,10 @@
     "peerDependencies": {},
     "dependencies": {
         "stylelint-config-recommended": "^13.0.0",
-        "stylelint-declaration-strict-value": "^1.9.2",
         "stylelint-order": "^6.0.3",
         "stylelint-stylistic": "^0.4.3",
         "stylelint-config-standard-scss": "^11.1.0",
-        "@digitalsilk/eslint-config": "^0.7.0",
+        "@digitalsilk/eslint-config": "^0.8.0",
         "stylelint": "^15.0.0"
     }
 }
