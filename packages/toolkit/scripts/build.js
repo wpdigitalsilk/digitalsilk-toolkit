@@ -7,13 +7,7 @@ const webpack = require('webpack');
 /**
  * Internal dependencies
  */
-const {
-	hasArgInCLI,
-	fromConfigRoot,
-	fromProjectRoot,
-	hasWebpackConfig,
-	displayWebpackStats,
-} = require('../utils');
+const { hasArgInCLI, fromConfigRoot, fromProjectRoot, hasWebpackConfig, displayWebpackStats } = require('../utils');
 
 if (hasArgInCLI('--watch')) {
 	require('./start');

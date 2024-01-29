@@ -8,13 +8,7 @@ const fs = require('fs');
 /**
  * Internal dependencies
  */
-const {
-	hasArgInCLI,
-	fromConfigRoot,
-	fromProjectRoot,
-	hasWebpackConfig,
-	displayWebpackStats,
-} = require('../utils');
+const { hasArgInCLI, fromConfigRoot, fromProjectRoot, hasWebpackConfig, displayWebpackStats } = require('../utils');
 
 if (hasArgInCLI('--webpack-no-externals')) {
 	process.env.DS_NO_EXTERNALS = true;
@@ -44,7 +38,7 @@ const runWebpack = () => {
 			},
 			(err, stats) => {
 				displayWebpackStats(err, stats);
-			},
+			}
 		);
 	}
 };
@@ -55,7 +49,7 @@ if (hot) {
 	process.on('SIGINT', () => {
 		// when gracefully leaving hot mode, clean up dist folder.
 		// this avoids leaving js code with the fast refresh instrumentation and thus reducing confusion
-		console.log('\digitalsilk-toolkit: Cleaning up dist folder...');
+		console.log('digitalsilk-toolkit: Cleaning up dist folder...');
 
 		fs.rmSync(fromProjectRoot('dist'), { recursive: true, force: true });
 	});

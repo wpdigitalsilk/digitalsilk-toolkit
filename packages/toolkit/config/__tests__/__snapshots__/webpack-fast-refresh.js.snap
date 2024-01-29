@@ -200,7 +200,7 @@ Object {
     MiniCssExtractPlugin: {"ignoreOrder":false,"runtime":true,"chunkFilename":"[id].css"},
     CopyPlugin: {},
     StylelintWebpackPlugin: {"cache":true,"cacheLocation":"node_modules/.cache/stylelint-webpack-plugin/.stylelintcache","extensions":["css","scss","sass"],"emitError":true,"emitWarning":true,"failOnError":false,"context":"/assets","files":"**/*.(s(c|a)ss|css)","allowEmptyInput":true,"lintDirtyModulesOnly":true},
-    SVGSpritemapPlugin: {"input":{"options":{},"allowDuplicates":false,"patterns":["./assets/icons/*.svg"]},"output":{"filename":"spritemap.svg","svg":{"sizes":false,"attributes":{}},"chunk":{"name":"spritemap","keep":false},"svg4everybody":false,"svgo":{"plugins":[]}},"sprite":{"prefix":"sprite-","prefixStylesSelectors":false,"gutter":0,"generate":{"title":true,"symbol":true,"use":false,"view":false}},"styles":false},
+    SVGSpritemapPlugin: {"input":{"options":{},"allowDuplicates":false,"patterns":["./assets/icons/*.svg"]},"output":{"filename":"svg-sprite.svg","svg":{"sizes":false,"attributes":{"style":"position:absolute;","width":"0","height":"0"}},"chunk":{"name":"spritemap","keep":false},"svg4everybody":false,"svgo":{"plugins":[]}},"sprite":{"prefix":"sprite-","prefixStylesSelectors":false,"gutter":0,"generate":{"title":true,"symbol":true,"use":false,"view":false}},"styles":false},
     DependencyExtractionWebpackPlugin: {"combineAssets":false,"combinedOutputFile":null,"externalizedReport":false,"injectPolyfill":false,"outputFormat":"php","outputFilename":null,"useDefaults":true},
     CleanExtractedDeps: {},
     WebpackRemoveEmptyScriptsPlugin: {"enabled":true,"verbose":false,"extensions":{},"ignore":[],"remove":{}},

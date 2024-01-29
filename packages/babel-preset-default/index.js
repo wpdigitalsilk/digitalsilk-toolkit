@@ -1,12 +1,6 @@
 const { declare } = require('@babel/helper-plugin-utils');
 
-const defaultTargets = [
-	'> 1%',
-	'Firefox ESR',
-	'last 2 versions',
-	'not ie <= 11',
-	'not ie_mob <=11',
-];
+const defaultTargets = ['> 1%', 'Firefox ESR', 'last 2 versions', 'not ie <= 11', 'not ie_mob <=11'];
 
 module.exports = declare((api, options) => {
 	const {
@@ -27,8 +21,7 @@ module.exports = declare((api, options) => {
 		}
 	})();
 
-	const development =
-		typeof options.development === 'boolean' ? options.development : api.env(['development']);
+	const development = typeof options.development === 'boolean' ? options.development : api.env(['development']);
 
 	const presets = [];
 
@@ -44,10 +37,7 @@ module.exports = declare((api, options) => {
 		},
 	]);
 
-	presets.push([
-		require.resolve('@babel/preset-typescript'),
-		{ isTSX: true, allExtensions: true },
-	]);
+	presets.push([require.resolve('@babel/preset-typescript'), { isTSX: true, allExtensions: true }]);
 
 	presets.push([
 		require.resolve('@babel/preset-react'),

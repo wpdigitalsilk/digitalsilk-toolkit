@@ -1,6 +1,5 @@
 # DigitalSilk Stylelint Config
 
-
 ## Dependencies
 
 1. [Node & NPM](https://www.npmjs.com/get-npm) - 3rd party dependencies are managed through NPM, so you will need that installed globally
@@ -57,10 +56,7 @@ You will then need to update the plugins section of your projects `.stylelintrc`
 
 ```json
 {
-  "extends": [
-    "stylelint-config-standard-scss",
-    "@digitalsilk/stylelint-config/scss"
-  ]
+	"extends": ["stylelint-config-standard-scss", "@digitalsilk/stylelint-config/scss"]
 }
 ```
 
@@ -85,18 +81,19 @@ To get around this issue, add the following to your projects, `.stylelintrc`
 ```
 
 ### Webpack Setup
+
 Run `npm install stylelint-webpack-plugin --save-dev`. You should already have the proper loader in `postcss-loader`, but if you don't install that as well. After installing stylelint and the configuration above add the following to your Webpack config:
 
 ```js
-import StyleLintPlugin from 'stylelint-webpack-plugin';
+import StyleLintPlugin from "stylelint-webpack-plugin";
 
 plugins: [
-  new StyleLintPlugin( {
-    configFile: ".stylelintrc", // if your config is in a non-standard place
-    files: "src/**/*.css", // location of your CSS files
-    fix: true, // if you want to auto-fix some of the basic rules
-  } ),
-]
+	new StyleLintPlugin({
+		configFile: ".stylelintrc", // if your config is in a non-standard place
+		files: "src/**/*.css", // location of your CSS files
+		fix: true, // if you want to auto-fix some of the basic rules
+	}),
+];
 ```
 
 ## Autofixing
