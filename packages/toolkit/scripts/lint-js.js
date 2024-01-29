@@ -35,21 +35,15 @@ const hasLintConfig =
 // When a configuration is not provided by the project, use from the default
 // provided with the scripts module. Instruct ESLint to avoid discovering via
 // the `--no-eslintrc` flag, as otherwise it will still merge with inherited.
-const defaultConfigArgs = !hasLintConfig
-	? ['--no-eslintrc', '--config', fromConfigRoot('.eslintrc.js')]
-	: [];
+const defaultConfigArgs = !hasLintConfig ? ['--no-eslintrc', '--config', fromConfigRoot('.eslintrc.js')] : [];
 
 // See: https://eslint.org/docs/user-guide/configuring#ignoring-files-and-directories.
 const hasIgnoredFiles = hasArgInCLI('--ignore-path') || hasProjectFile('.eslintignore');
 
-const defaultIgnoreArgs = !hasIgnoredFiles
-	? ['--ignore-path', fromConfigRoot('.eslintignore')]
-	: [];
+const defaultIgnoreArgs = !hasIgnoredFiles ? ['--ignore-path', fromConfigRoot('.eslintignore')] : [];
 
-const result = spawn(
-	resolveBin('eslint'),
-	[...defaultConfigArgs, ...defaultIgnoreArgs, ...args, ...defaultFilesArgs],
-	{ stdio: 'inherit' },
-);
+const result = spawn(resolveBin('eslint'), [...defaultConfigArgs, ...defaultIgnoreArgs, ...args, ...defaultFilesArgs], {
+	stdio: 'inherit',
+});
 
 process.exit(result.status);

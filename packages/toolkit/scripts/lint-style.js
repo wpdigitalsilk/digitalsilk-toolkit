@@ -36,14 +36,12 @@ const defaultConfigArgs = !hasLintConfig ? ['--config', fromConfigRoot('stylelin
 // See: https://github.com/stylelint/stylelint/blob/master/docs/user-guide/configuration.md#stylelintignore.
 const hasIgnoredFiles = hasArgInCLI('--ignore-path') || hasProjectFile('.stylelintignore');
 
-const defaultIgnoreArgs = !hasIgnoredFiles
-	? ['--ignore-path', fromConfigRoot('.stylelintignore')]
-	: [];
+const defaultIgnoreArgs = !hasIgnoredFiles ? ['--ignore-path', fromConfigRoot('.stylelintignore')] : [];
 
 const result = spawn(
 	resolveBin('stylelint'),
 	[...defaultConfigArgs, ...defaultIgnoreArgs, ...args, ...defaultFilesArgs],
-	{ stdio: 'inherit' },
+	{ stdio: 'inherit' }
 );
 
 process.exit(result.status);
