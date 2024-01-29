@@ -210,7 +210,9 @@ module.exports = ({
 				filename: 'svg-sprite.svg',
 				svg: {
 					attributes:{
-						style: "position:absolute; width:0; height:0;"
+						style: "position:absolute;",
+						width: "0",
+						height: "0"
 					}
 				}
 			}
