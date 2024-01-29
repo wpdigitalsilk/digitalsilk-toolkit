@@ -1,5 +1,14 @@
 # @digitalsilk/eslint-plugin
 
+## 0.9.1
+
+### Patch Changes
+
+- update
+- Updated dependencies
+  - @digitalsilk/babel-preset-default@0.9.1
+  - @digitalsilk/eslint-config@0.9.1
+
 ## 0.9.0
 
 ### Minor Changes
