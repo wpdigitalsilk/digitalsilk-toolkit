@@ -15,7 +15,6 @@ const DSToolkitTscPlugin = require("./plugins/tsc");
 const NoBrowserSyncPlugin = require("./plugins/no-browser-sync");
 const SVGSpritemapPlugin = require("svg-spritemap-webpack-plugin");
 
-
 const {
 	hasStylelintConfig,
 	fromConfigRoot,
@@ -206,7 +205,16 @@ module.exports = ({
 		}),
 
 		// SVG Sprite
-		new SVGSpritemapPlugin(paths.iconsDir +"*.svg"),
+		new SVGSpritemapPlugin(paths.iconsDir +"*.svg", {
+			output: {
+				filename: 'svg-sprite.svg',
+				svg: {
+					attributes:{
+						style: "position:absolute; width:0; height:0;"
+					}
+				}
+			}
+		}),
 
 		// Fancy WebpackBar.
 		!hasReactFastRefresh && new WebpackBar(webpackbarArguments),
