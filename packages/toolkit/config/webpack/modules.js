@@ -1,11 +1,7 @@
-const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 
-const {
-	hasBabelConfig,
-	hasPostCSSConfig,
-	fromConfigRoot,
-} = require("../../utils");
-const { isPackageInstalled } = require("../../utils/package");
+const { hasBabelConfig, hasPostCSSConfig, fromConfigRoot } = require('../../utils');
+const { isPackageInstalled } = require('../../utils/package');
 
 const getCSSLoaders = ({ options, postcss, sass }) => {
 	// Note that the order of loaders is important. The loaders are applied from right to left.
@@ -15,30 +11,30 @@ const getCSSLoaders = ({ options, postcss, sass }) => {
 			loader: MiniCSSExtractPlugin.loader,
 		},
 		{
-			loader: require.resolve("css-loader"),
+			loader: require.resolve('css-loader'),
 			options,
 		},
 
 		postcss && {
-			loader: require.resolve("postcss-loader"),
+			loader: require.resolve('postcss-loader'),
 			options: {
 				postcssOptions: {
 					// Provide a fallback configuration if there's not
 					// one explicitly available in the project.
 					...(!hasPostCSSConfig() && {
-						config: fromConfigRoot("postcss.config.js"),
+						config: fromConfigRoot('postcss.config.js'),
 					}),
 				},
 			},
 		},
 		sass && {
-			loader: require.resolve("sass-loader"),
+			loader: require.resolve('sass-loader'),
 			options: {
 				sourceMap: options ? options.sourceMap : false,
 				sassOptions: {},
 			},
 		},
-		require.resolve("sass-loader"),
+		require.resolve('sass-loader'),
 	].filter(Boolean);
 };
 
@@ -46,10 +42,7 @@ function shouldExclude(input, include) {
 	let shouldInclude = false;
 
 	include.forEach((includedInput) => {
-		if (
-			input.includes(includedInput) ||
-			input.includes(includedInput.replace(/\//g, "\\"))
-		) {
+		if (input.includes(includedInput) || input.includes(includedInput.replace(/\//g, '\\'))) {
 			shouldInclude = true;
 		}
 	});
@@ -63,15 +56,7 @@ function shouldExclude(input, include) {
 	return /node_modules/.test(input);
 }
 
-const LINARIA_EXTENSION = ".linaria.module.css";
-const LINARIA_EXTENSION_REGEXP = /\.linaria\.module\.css/;
-
-module.exports = ({
-	isProduction,
-	isPackage,
-	defaultTargets,
-	projectConfig: { wordpress, hot, include },
-}) => {
+module.exports = ({ isProduction, isPackage, defaultTargets, projectConfig: { wordpress, hot, include } }) => {
 	const hasReactFastRefresh = hot && !isProduction;
 
 	// Provide a default configuration if there's not
@@ -80,24 +65,20 @@ module.exports = ({
 		? {
 				babelrc: false,
 				configFile: false,
-				sourceType: "unambiguous",
-				plugins: [
-					hasReactFastRefresh && require.resolve("react-refresh/babel"),
-				].filter(Boolean),
+				sourceType: 'unambiguous',
+				plugins: [hasReactFastRefresh && require.resolve('react-refresh/babel')].filter(Boolean),
 				presets: [
 					[
-						require.resolve("@digitalsilk/babel-preset-default"),
+						require.resolve('@digitalsilk/babel-preset-default'),
 						{
 							wordpress,
-							useBuiltIns: isPackage ? false : "usage",
+							useBuiltIns: isPackage ? false : 'usage',
 							targets: defaultTargets,
 						},
 					],
 				],
 		  }
 		: {};
-
-
 
 	return {
 		rules: [
@@ -107,10 +88,10 @@ module.exports = ({
 				exclude: (input) => shouldExclude(input, include),
 				use: [
 					{
-						loader: require.resolve("./plugins/noop-loader"),
+						loader: require.resolve('./plugins/noop-loader'),
 					},
 					{
-						loader: require.resolve("babel-loader"),
+						loader: require.resolve('babel-loader'),
 						options: {
 							// Babel uses a directory within local node_modules
 							// by default. Use the environment variable option
@@ -123,7 +104,7 @@ module.exports = ({
 			},
 			{
 				test: /\.svg$/,
-				use: ["@svgr/webpack", "url-loader"],
+				use: ['@svgr/webpack', 'url-loader'],
 			},
 			{
 				test: /\.css$/,
@@ -135,7 +116,7 @@ module.exports = ({
 					postcss: true,
 					sass: false,
 				}),
-				exclude: [/\.module\.css$/, LINARIA_EXTENSION_REGEXP],
+				exclude: [/\.module\.css$/],
 			},
 			{
 				test: /\.(sc|sa)ss$/,
@@ -149,7 +130,7 @@ module.exports = ({
 						sass: true,
 					}),
 				],
-				exclude: [/\.module\.css$/, LINARIA_EXTENSION_REGEXP],
+				exclude: [/\.module\.css$/],
 			},
 			{
 				test: /\.module\.css$/,
@@ -165,21 +146,12 @@ module.exports = ({
 						sass: true,
 					}),
 				],
-				exclude: [/\.linaria\.module\.css$/],
 			},
-			{
-				test: LINARIA_EXTENSION_REGEXP,
-				use: [
-					{ loader: MiniCSSExtractPlugin.loader },
-					{
-						loader: "css-loader",
-					},
-				],
-			},
+
 			// when in package module only include referenced resources
 			isPackage && {
 				test: /\.(woff(2)?|ttf|eot|svg|jpg|jpeg|png|giff|webp)(\?v=\d+\.\d+\.\d+)?$/,
-				type: "asset/resource",
+				type: 'asset/resource',
 			},
 		].filter(Boolean),
 	};
