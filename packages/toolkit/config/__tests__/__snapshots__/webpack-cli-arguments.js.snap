@@ -64,7 +64,6 @@ Object {
       Object {
         "exclude": Array [
           /\\\\\\.module\\\\\\.css\\$/,
-          /\\\\\\.linaria\\\\\\.module\\\\\\.css/,
         ],
         "test": /\\\\\\.css\\$/,
         "use": Array [
@@ -92,7 +91,6 @@ Object {
       Object {
         "exclude": Array [
           /\\\\\\.module\\\\\\.css\\$/,
-          /\\\\\\.linaria\\\\\\.module\\\\\\.css/,
         ],
         "test": /\\\\\\.\\(sc\\|sa\\)ss\\$/,
         "use": Array [
@@ -125,9 +123,6 @@ Object {
         ],
       },
       Object {
-        "exclude": Array [
-          /\\\\\\.linaria\\\\\\.module\\\\\\.css\\$/,
-        ],
         "test": /\\\\\\.module\\\\\\.css\\$/,
         "use": Array [
           Object {
@@ -158,17 +153,6 @@ Object {
             },
           },
           "/node_modules/sass-loader/dist/cjs.js",
-        ],
-      },
-      Object {
-        "test": /\\\\\\.linaria\\\\\\.module\\\\\\.css/,
-        "use": Array [
-          Object {
-            "loader": "/node_modules/mini-css-extract-plugin/dist/loader.js",
-          },
-          Object {
-            "loader": "css-loader",
-          },
         ],
       },
       Object {
@@ -271,7 +255,6 @@ Object {
       Object {
         "exclude": Array [
           /\\\\\\.module\\\\\\.css\\$/,
-          /\\\\\\.linaria\\\\\\.module\\\\\\.css/,
         ],
         "test": /\\\\\\.css\\$/,
         "use": Array [
@@ -297,7 +280,6 @@ Object {
       Object {
         "exclude": Array [
           /\\\\\\.module\\\\\\.css\\$/,
-          /\\\\\\.linaria\\\\\\.module\\\\\\.css/,
         ],
         "test": /\\\\\\.\\(sc\\|sa\\)ss\\$/,
         "use": Array [
@@ -328,9 +310,6 @@ Object {
         ],
       },
       Object {
-        "exclude": Array [
-          /\\\\\\.linaria\\\\\\.module\\\\\\.css\\$/,
-        ],
         "test": /\\\\\\.module\\\\\\.css\\$/,
         "use": Array [
           Object {
@@ -359,17 +338,6 @@ Object {
             },
           },
           "/node_modules/sass-loader/dist/cjs.js",
-        ],
-      },
-      Object {
-        "test": /\\\\\\.linaria\\\\\\.module\\\\\\.css/,
-        "use": Array [
-          Object {
-            "loader": "/node_modules/mini-css-extract-plugin/dist/loader.js",
-          },
-          Object {
-            "loader": "css-loader",
-          },
         ],
       },
     ],
@@ -480,7 +448,6 @@ Object {
       Object {
         "exclude": Array [
           /\\\\\\.module\\\\\\.css\\$/,
-          /\\\\\\.linaria\\\\\\.module\\\\\\.css/,
         ],
         "test": /\\\\\\.css\\$/,
         "use": Array [
@@ -506,7 +473,6 @@ Object {
       Object {
         "exclude": Array [
           /\\\\\\.module\\\\\\.css\\$/,
-          /\\\\\\.linaria\\\\\\.module\\\\\\.css/,
         ],
         "test": /\\\\\\.\\(sc\\|sa\\)ss\\$/,
         "use": Array [
@@ -537,9 +503,6 @@ Object {
         ],
       },
       Object {
-        "exclude": Array [
-          /\\\\\\.linaria\\\\\\.module\\\\\\.css\\$/,
-        ],
         "test": /\\\\\\.module\\\\\\.css\\$/,
         "use": Array [
           Object {
@@ -568,17 +531,6 @@ Object {
             },
           },
           "/node_modules/sass-loader/dist/cjs.js",
-        ],
-      },
-      Object {
-        "test": /\\\\\\.linaria\\\\\\.module\\\\\\.css/,
-        "use": Array [
-          Object {
-            "loader": "/node_modules/mini-css-extract-plugin/dist/loader.js",
-          },
-          Object {
-            "loader": "css-loader",
-          },
         ],
       },
     ],
@@ -689,7 +641,6 @@ Object {
       Object {
         "exclude": Array [
           /\\\\\\.module\\\\\\.css\\$/,
-          /\\\\\\.linaria\\\\\\.module\\\\\\.css/,
         ],
         "test": /\\\\\\.css\\$/,
         "use": Array [
@@ -715,7 +666,6 @@ Object {
       Object {
         "exclude": Array [
           /\\\\\\.module\\\\\\.css\\$/,
-          /\\\\\\.linaria\\\\\\.module\\\\\\.css/,
         ],
         "test": /\\\\\\.\\(sc\\|sa\\)ss\\$/,
         "use": Array [
@@ -746,9 +696,6 @@ Object {
         ],
       },
       Object {
-        "exclude": Array [
-          /\\\\\\.linaria\\\\\\.module\\\\\\.css\\$/,
-        ],
         "test": /\\\\\\.module\\\\\\.css\\$/,
         "use": Array [
           Object {
@@ -777,17 +724,6 @@ Object {
             },
           },
           "/node_modules/sass-loader/dist/cjs.js",
-        ],
-      },
-      Object {
-        "test": /\\\\\\.linaria\\\\\\.module\\\\\\.css/,
-        "use": Array [
-          Object {
-            "loader": "/node_modules/mini-css-extract-plugin/dist/loader.js",
-          },
-          Object {
-            "loader": "css-loader",
-          },
         ],
       },
     ],
@@ -918,7 +854,6 @@ Object {
       Object {
         "exclude": Array [
           /\\\\\\.module\\\\\\.css\\$/,
-          /\\\\\\.linaria\\\\\\.module\\\\\\.css/,
         ],
         "test": /\\\\\\.css\\$/,
         "use": Array [
@@ -946,7 +881,6 @@ Object {
       Object {
         "exclude": Array [
           /\\\\\\.module\\\\\\.css\\$/,
-          /\\\\\\.linaria\\\\\\.module\\\\\\.css/,
         ],
         "test": /\\\\\\.\\(sc\\|sa\\)ss\\$/,
         "use": Array [
@@ -979,9 +913,6 @@ Object {
         ],
       },
       Object {
-        "exclude": Array [
-          /\\\\\\.linaria\\\\\\.module\\\\\\.css\\$/,
-        ],
         "test": /\\\\\\.module\\\\\\.css\\$/,
         "use": Array [
           Object {
@@ -1012,17 +943,6 @@ Object {
             },
           },
           "/node_modules/sass-loader/dist/cjs.js",
-        ],
-      },
-      Object {
-        "test": /\\\\\\.linaria\\\\\\.module\\\\\\.css/,
-        "use": Array [
-          Object {
-            "loader": "/node_modules/mini-css-extract-plugin/dist/loader.js",
-          },
-          Object {
-            "loader": "css-loader",
-          },
         ],
       },
       Object {
@@ -1145,7 +1065,6 @@ Object {
       Object {
         "exclude": Array [
           /\\\\\\.module\\\\\\.css\\$/,
-          /\\\\\\.linaria\\\\\\.module\\\\\\.css/,
         ],
         "test": /\\\\\\.css\\$/,
         "use": Array [
@@ -1173,7 +1092,6 @@ Object {
       Object {
         "exclude": Array [
           /\\\\\\.module\\\\\\.css\\$/,
-          /\\\\\\.linaria\\\\\\.module\\\\\\.css/,
         ],
         "test": /\\\\\\.\\(sc\\|sa\\)ss\\$/,
         "use": Array [
@@ -1206,9 +1124,6 @@ Object {
         ],
       },
       Object {
-        "exclude": Array [
-          /\\\\\\.linaria\\\\\\.module\\\\\\.css\\$/,
-        ],
         "test": /\\\\\\.module\\\\\\.css\\$/,
         "use": Array [
           Object {
@@ -1239,17 +1154,6 @@ Object {
             },
           },
           "/node_modules/sass-loader/dist/cjs.js",
-        ],
-      },
-      Object {
-        "test": /\\\\\\.linaria\\\\\\.module\\\\\\.css/,
-        "use": Array [
-          Object {
-            "loader": "/node_modules/mini-css-extract-plugin/dist/loader.js",
-          },
-          Object {
-            "loader": "css-loader",
-          },
         ],
       },
       Object {

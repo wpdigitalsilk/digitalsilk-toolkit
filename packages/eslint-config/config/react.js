@@ -18,6 +18,7 @@ module.exports = {
 		],
 		// prop spreading is dangerous but has its use cases
 		'react/jsx-props-no-spreading': 1,
+		'react/jsx-no-useless-fragment': 0,
 		// prefer arrow functions for defining components
 		'react/function-component-definition': [
 			1,
