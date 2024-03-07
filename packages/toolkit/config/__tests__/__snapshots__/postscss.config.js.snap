@@ -123,8 +123,7 @@ exports[`postcss properly transforms css 1`] = `
 	position: relative;
 }
 
-.uikit__chevron-up,
-.uikit__chevron-down {
+.uikit__chevron-up, .uikit__chevron-down {
 	fill: currentColor;
 	position: absolute;
 	right: 0;
@@ -136,8 +135,7 @@ exports[`postcss properly transforms css 1`] = `
 	display: none;
 }
 
-.uikit__section > .heading > .toggle[aria-expanded=\\"true\\"] .uikit__chevron-up,
-.uikit__chevron-down {
+.uikit__section > .heading > .toggle[aria-expanded=\\"true\\"] .uikit__chevron-up, .uikit__chevron-down {
 	display: block;
 }
 
@@ -256,6 +254,7 @@ Object {
   "plugins": Object {
     "cssnano": false,
     "postcss-current-selector": Object {},
+    "postcss-extend": Object {},
     "postcss-import": Object {},
     "postcss-mixins": Object {},
     "postcss-nested": Object {},
@@ -291,6 +290,7 @@ Object {
       ],
     },
     "postcss-current-selector": Object {},
+    "postcss-extend": Object {},
     "postcss-import": Object {},
     "postcss-mixins": Object {},
     "postcss-nested": Object {},
@@ -332,6 +332,7 @@ Object {
         "form",
       ],
     },
+    "postcss-extend": Object {},
     "postcss-import": Object {},
     "postcss-mixins": Object {},
     "postcss-nested": Object {},
@@ -389,6 +390,7 @@ Object {
         "form",
       ],
     },
+    "postcss-extend": Object {},
     "postcss-import": Object {},
     "postcss-mixins": Object {},
     "postcss-nested": Object {},

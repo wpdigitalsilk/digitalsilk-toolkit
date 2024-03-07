@@ -66,6 +66,7 @@ module.exports = {
 		'react/prop-types': 0,
 		'react/jsx-props-no-spreading': 0,
 		'@wordpress/dependency-group': 0,
+		'@wordpress/no-unused-vars-before-return': 0,
 		'import/no-unresolved': [2, { ignore: ['^@wordpress/'] }],
 	},
 };
