@@ -12,6 +12,7 @@ module.exports = ({ file, env }) => {
 					'custom-properties': false,
 				},
 			},
+			'postcss-custom-media': {},
 			'postcss-nested-ancestors': {},
 			'postcss-nested': {},
 			'postcss-current-selector': {},

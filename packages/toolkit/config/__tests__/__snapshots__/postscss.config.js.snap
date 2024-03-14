@@ -8,8 +8,6 @@ exports[`postcss properly transforms css 1`] = `
 	--c-uikit-border: #ccc;
 	--c-uikit-primary: #000;
 
-	@custom-media --bp-uikit-small (min-width: 40.625em);
-
 }
 
 .uikit__container {
@@ -159,7 +157,7 @@ exports[`postcss properly transforms css 1`] = `
 	margin-bottom: 1em;
 }
 
-@media (--bp-uikit-small) {
+@media (min-width: 40.625em) {
 
 	.uikit__section > .heading {
 		width: 145px;
@@ -254,6 +252,7 @@ Object {
   "plugins": Object {
     "cssnano": false,
     "postcss-current-selector": Object {},
+    "postcss-custom-media": Object {},
     "postcss-extend": Object {},
     "postcss-import": Object {},
     "postcss-mixins": Object {},
@@ -290,6 +289,7 @@ Object {
       ],
     },
     "postcss-current-selector": Object {},
+    "postcss-custom-media": Object {},
     "postcss-extend": Object {},
     "postcss-import": Object {},
     "postcss-mixins": Object {},
@@ -310,6 +310,7 @@ Object {
   "plugins": Object {
     "cssnano": false,
     "postcss-current-selector": Object {},
+    "postcss-custom-media": Object {},
     "postcss-editor-styles": Object {
       "ignore": Array [
         ":root",
@@ -368,6 +369,7 @@ Object {
       ],
     },
     "postcss-current-selector": Object {},
+    "postcss-custom-media": Object {},
     "postcss-editor-styles": Object {
       "ignore": Array [
         ":root",
