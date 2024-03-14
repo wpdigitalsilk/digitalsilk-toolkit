@@ -12,6 +12,9 @@ module.exports = ({ file, env }) => {
 					'custom-properties': false,
 				},
 			},
+			'postcss-global-data': {
+				files: [path.resolve(process.cwd(), '/assets/css/global/custom-media-queries.css')],
+			},
 			'postcss-custom-media': {},
 			'postcss-nested-ancestors': {},
 			'postcss-nested': {},
@@ -35,7 +38,7 @@ module.exports = ({ file, env }) => {
 					preset: [
 						'default',
 						{
-							autoprefixer: false,
+							autoprefixer: true,
 							calc: {
 								precision: 8,
 							},
