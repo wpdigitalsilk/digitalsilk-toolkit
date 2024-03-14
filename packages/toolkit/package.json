@@ -16,6 +16,7 @@
 	"dependencies": {
 		"@babel/core": "^7.21.8",
 		"@babel/eslint-parser": "^7.21.8",
+		"@csstools/postcss-global-data": "^2.1.1",
 		"@digitalsilk/babel-preset-default": "^0.9.7",
 		"@digitalsilk/eslint-config": "^0.9.7",
 		"@digitalsilk/stylelint-config": "^0.9.7",
