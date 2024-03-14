@@ -12,7 +12,7 @@ module.exports = ({ file, env }) => {
 					'custom-properties': false,
 				},
 			},
-			'postcss-global-data': {
+			'@csstools/postcss-global-data': {
 				files: [path.resolve(process.cwd(), '/assets/css/global/custom-media-queries.css')],
 			},
 			'postcss-custom-media': {},
