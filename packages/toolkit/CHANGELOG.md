@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.9.6
+
+### Patch Changes
+
+- Postcss
+- Updated dependencies
+  - @digitalsilk/babel-preset-default@0.9.6
+  - @digitalsilk/stylelint-config@0.9.6
+  - @digitalsilk/eslint-config@0.9.6
+
 ## 0.9.5
 
 ### Patch Changes
