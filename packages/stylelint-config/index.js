@@ -1,14 +1,10 @@
 module.exports = {
-	extends: ['stylelint-config-recommended'],
+	extends: ['stylelint-config-recommended', 'stylelint-config-standard-scss'],
 	plugins: ['stylelint-stylistic', 'stylelint-order'],
 	rules: {
-		// 'at-rule-empty-line-before': [
-		// 	'always',
-		// 	{
-		// 		except: ['blockless-after-blockless'],
-		// 		ignore: ['after-comment'],
-		// 	},
-		// ],
+		'at-rule-no-unknown': null,
+		'import-notation': null,
+		'scss/at-rule-no-unknown': [true, { ignoreAtRules: ['mixin', 'define-mixin'] }],
 		'at-rule-empty-line-before': null,
 		'at-rule-no-unknown': [
 			true,
@@ -18,20 +14,8 @@ module.exports = {
 		],
 		'color-hex-length': 'short',
 		'color-named': 'never',
-		// "comment-empty-line-before": [
-		// 	"always",
-		// 	{
-		// 		ignore: ["stylelint-commands"],
-		// 	},
-		// ],
 		'comment-empty-line-before': null,
 		'custom-property-pattern': null,
-		// 'custom-property-pattern': [
-		// 	'^([a-z][a-z0-9]*)(-[a-z0-9]+)*$|^wp--([a-z][a-z0-9]*)(--[a-z0-9]+)*$',
-		// 	{
-		// 		message: 'Expected custom property name to be kebab-case or wp--kebab--case',
-		// 	},
-		// ],
 		'declaration-block-no-duplicate-properties': [
 			true,
 			{
@@ -64,18 +48,6 @@ module.exports = {
 		'order/properties-alphabetical-order': null,
 		'selector-not-notation': null,
 		'rule-empty-line-before': null,
-		// "scale-unlimited/declaration-strict-value": [
-		// 	"/color/",
-		// 	{
-		// 		ignoreValues: [
-		// 			"currentcolor",
-		// 			"inherit",
-		// 			"initial",
-		// 			"transparent",
-		// 			"unset",
-		// 		],
-		// 	},
-		// ],
 		'selector-attribute-quotes': 'always',
 		'selector-class-pattern': null,
 		'selector-id-pattern': [
