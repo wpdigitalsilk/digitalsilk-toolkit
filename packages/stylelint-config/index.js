@@ -2,9 +2,6 @@ module.exports = {
 	extends: ['stylelint-config-recommended', 'stylelint-config-standard-scss'],
 	plugins: ['stylelint-stylistic', 'stylelint-order'],
 	rules: {
-		'at-rule-no-unknown': null,
-		'import-notation': null,
-		'scss/at-rule-no-unknown': [true, { ignoreAtRules: ['mixin', 'define-mixin'] }],
 		'at-rule-empty-line-before': null,
 		'at-rule-no-unknown': [
 			true,
@@ -123,5 +120,11 @@ module.exports = {
 				ignoreKeywords: ['currentcolor'],
 			},
 		],
+		'import-notation': null,
+		'scss/at-rule-no-unknown': [true, { ignoreAtRules: ['mixin', 'define-mixin'] }],
+		'declaration-empty-line-before': null,
+		'custom-property-empty-line-before': null,
+		'declaration-block-no-redundant-longhand-properties': null,
+		'color-function-notation': null,
 	},
 };
