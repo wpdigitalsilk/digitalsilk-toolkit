@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.10.0
+
+### Minor Changes
+
+- update scss
+
+### Patch Changes
+
+- Updated dependencies
+  - @digitalsilk/babel-preset-default@0.10.0
+
+## 0.9.10
+
+### Patch Changes
+
+- Update scss
+- Updated dependencies
+  - @digitalsilk/babel-preset-default@0.9.10
+
 ## 0.9.9
 
 ### Patch Changes
