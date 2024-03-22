@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.0.0
+
+### Major Changes
+
+- Update
+
+### Patch Changes
+
+- Updated dependencies
+  - @digitalsilk/eslint-config@1.0.0
+
 ## 0.10.0
 
 ### Minor Changes
