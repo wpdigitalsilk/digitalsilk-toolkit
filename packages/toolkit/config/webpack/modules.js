@@ -56,7 +56,12 @@ function shouldExclude(input, include) {
 	return /node_modules/.test(input);
 }
 
-module.exports = ({ isProduction, isPackage, defaultTargets, projectConfig: { wordpress, hot, include } }) => {
+module.exports = ({
+	isProduction,
+	isPackage,
+	defaultTargets,
+	projectConfig: { wordpress, hot, include, publicPath },
+}) => {
 	const hasReactFastRefresh = hot && !isProduction;
 
 	// Provide a default configuration if there's not
@@ -150,8 +155,11 @@ module.exports = ({ isProduction, isPackage, defaultTargets, projectConfig: { wo
 			{
 				test: /\.(png|jpe?g|gif)$/i,
 				loader: require.resolve('file-loader'),
+
 				options: {
-					name: '[path][name].[ext]',
+					name: '[name].[ext]', // Adjust as needed to include the path if required
+					// outputPath: 'images/',        // Output directory within the build folder
+					publicPath: publicPath, // Public URL for accessing the images
 				},
 			},
 
