@@ -1,4 +1,3 @@
-const path = require('path');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const { hasBabelConfig, hasPostCSSConfig, fromConfigRoot } = require('../../utils');
 const { isPackageInstalled } = require('../../utils/package');
@@ -56,18 +55,8 @@ function shouldExclude(input, include) {
 	return /node_modules/.test(input);
 }
 
-module.exports = ({
-	isProduction,
-	isPackage,
-	defaultTargets,
-	packageConfig: { packageType, main },
-	projectConfig: { wordpress, hot, include, publicPath },
-}) => {
+module.exports = ({ isProduction, isPackage, defaultTargets, projectConfig: { wordpress, hot, include } }) => {
 	const hasReactFastRefresh = hot && !isProduction;
-
-	const outputPath = path.resolve(process.cwd(), 'dist');
-
-	console.log(outputPath);
 
 	// Provide a default configuration if there's not
 	// one explicitly available in the project.
@@ -156,15 +145,6 @@ module.exports = ({
 						sass: true,
 					}),
 				],
-			},
-			{
-				test: /\.(png|jpe?g|gif)$/i,
-				loader: require.resolve('file-loader'),
-				options: {
-					name: '[name].[ext]', // Adjust as needed to include the path if required
-					outputPath: outputPath, // Output directory within the build folder
-					publicPath: publicPath, // Public URL for accessing the images
-				},
 			},
 
 			// when in package module only include referenced resources
