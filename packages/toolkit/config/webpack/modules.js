@@ -1,5 +1,5 @@
+const path = require('path');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
-
 const { hasBabelConfig, hasPostCSSConfig, fromConfigRoot } = require('../../utils');
 const { isPackageInstalled } = require('../../utils/package');
 
