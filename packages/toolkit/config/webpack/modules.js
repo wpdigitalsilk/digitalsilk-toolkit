@@ -64,6 +64,9 @@ module.exports = ({
 }) => {
 	const hasReactFastRefresh = hot && !isProduction;
 
+	console.log(defaultTargets);
+	console.log(projectConfig);
+
 	// Provide a default configuration if there's not
 	// one explicitly available in the project.
 	const babelConfig = !hasBabelConfig()
@@ -158,7 +161,7 @@ module.exports = ({
 
 				options: {
 					name: '[name].[ext]', // Adjust as needed to include the path if required
-					// outputPath: 'images/',        // Output directory within the build folder
+					outputPath: 'images/', // Output directory within the build folder
 					publicPath: publicPath, // Public URL for accessing the images
 				},
 			},
