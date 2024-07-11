@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.3
+
+### Patch Changes
+
+- loader options
+- Updated dependencies
+  - @digitalsilk/eslint-config@1.0.3
+
 ## 1.0.2
 
 ### Patch Changes
