@@ -64,8 +64,7 @@ module.exports = ({
 }) => {
 	const hasReactFastRefresh = hot && !isProduction;
 
-	console.log(defaultTargets);
-	console.log(projectConfig);
+	console.log(publicPath);
 
 	// Provide a default configuration if there's not
 	// one explicitly available in the project.
