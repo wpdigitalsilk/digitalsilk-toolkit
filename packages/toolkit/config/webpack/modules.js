@@ -149,11 +149,10 @@ module.exports = ({ isProduction, isPackage, defaultTargets, projectConfig: { wo
 			},
 			{
 				test: /\.(png|jpe?g|gif)$/i,
-				use: [
-					{
-						loader: require.resolve('file-loader'),
-					},
-				],
+				loader: require.resolve('file-loader'),
+				options: {
+					name: '[path][name].[ext]',
+				},
 			},
 
 			// when in package module only include referenced resources
