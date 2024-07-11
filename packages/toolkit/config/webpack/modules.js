@@ -60,11 +60,14 @@ module.exports = ({
 	isProduction,
 	isPackage,
 	defaultTargets,
+	packageConfig: { packageType, main },
 	projectConfig: { wordpress, hot, include, publicPath },
 }) => {
 	const hasReactFastRefresh = hot && !isProduction;
 
-	console.log(publicPath);
+	const outputPath = path.resolve(process.cwd(), 'dist');
+
+	console.log(outputPath);
 
 	// Provide a default configuration if there's not
 	// one explicitly available in the project.
@@ -157,10 +160,9 @@ module.exports = ({
 			{
 				test: /\.(png|jpe?g|gif)$/i,
 				loader: require.resolve('file-loader'),
-
 				options: {
 					name: '[name].[ext]', // Adjust as needed to include the path if required
-					outputPath: 'images/', // Output directory within the build folder
+					outputPath: outputPath, // Output directory within the build folder
 					publicPath: publicPath, // Public URL for accessing the images
 				},
 			},
