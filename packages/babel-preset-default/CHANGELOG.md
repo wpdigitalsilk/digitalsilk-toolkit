@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.1
+
+### Patch Changes
+
+- Add shared css
+- Updated dependencies
+  - @digitalsilk/eslint-config@1.1.1
+
 ## 1.1.0
 
 ### Minor Changes
