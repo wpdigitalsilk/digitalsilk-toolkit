@@ -13,10 +13,7 @@ module.exports = ({ file, env }) => {
 				},
 			},
 			'@csstools/postcss-global-data': {
-				files: [
-					path.resolve(process.cwd(), 'assets/css/frontend/global/custom-media-queries.css'),
-					path.resolve(process.cwd(), 'assets/css/frontend/global/shared.css'),
-				],
+				files: [path.resolve(process.cwd(), 'assets/css/frontend/global/custom-media-queries.css')],
 			},
 			'postcss-custom-media': {},
 			'postcss-nested-ancestors': {},
