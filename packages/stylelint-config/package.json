@@ -1,6 +1,6 @@
 {
 	"name": "@digitalsilk/stylelint-config",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"description": "Digital Silk stylelint config for WP projects",
 	"main": "index.js",
 	"homepage": "https://github.com/wpdigitalsilk/digitalsilk-toolkit/tree/develop/packages/stylelint-config#readme",
@@ -26,7 +26,7 @@
 		"node": "^14.0.0 || ^16.0.0 || ^18.0.0 || ^20.0.0"
 	},
 	"dependencies": {
-		"@digitalsilk/eslint-config": "^1.1.1",
+		"@digitalsilk/eslint-config": "^1.1.2",
 		"stylelint": "^15.0.0",
 		"stylelint-config-recommended": "^13.0.0",
 		"stylelint-config-standard-scss": "^11.1.0",
