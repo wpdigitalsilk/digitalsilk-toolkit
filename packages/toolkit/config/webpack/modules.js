@@ -101,14 +101,6 @@ module.exports = ({ isProduction, isPackage, defaultTargets, projectConfig: { wo
 					},
 				].filter(Boolean),
 			},
-
-			{
-				test: /\.js$/i,
-				exclude: /node_modules/,
-				use: {
-					loader: 'babel-loader',
-				},
-			},
 			{
 				test: /\.svg$/,
 				use: ['@svgr/webpack', 'url-loader'],
