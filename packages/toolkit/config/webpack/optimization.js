@@ -9,6 +9,16 @@ module.exports = ({ isProduction, projectConfig: { hot, analyze } }) => {
 	return {
 		concatenateModules: isProduction && !analyze,
 		runtimeChunk: hot ? 'single' : false,
+		splitChunks: {
+			chunks: 'all',
+			cacheGroups: {
+				vendor: {
+				test: /[\\/]node_modules[\\/]swiper[\\/]/,
+				name: 'swiper',
+				chunks: 'all',
+				},
+			},
+		},
 		minimizer: [
 			new TerserPlugin({
 				parallel: true,
