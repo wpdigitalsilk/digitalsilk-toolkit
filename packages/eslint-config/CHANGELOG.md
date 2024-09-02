@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.3
+
+### Patch Changes
+
+- Add Swiper
+- Updated dependencies
+  - @digitalsilk/babel-preset-default@1.1.3
+
 ## 1.1.2
 
 ### Patch Changes

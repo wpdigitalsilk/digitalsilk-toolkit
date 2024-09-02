@@ -16,5 +16,6 @@ module.exports = ({ isPackage, packageConfig: { externals, packageType } }) => {
 	return {
 		jquery: 'jQuery',
 		lodash: 'lodash',
+		swiper: "Swiper"
 	};
 };
