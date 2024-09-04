@@ -6,6 +6,7 @@ Object {
     "allowedHosts": Array [
       ".test",
       ".local",
+      ".dev",
     ],
     "client": Object {
       "overlay": Object {
@@ -25,6 +26,7 @@ Object {
         },
       },
     },
+    "static": "/dist",
   },
   "devtool": "source-map",
   "entry": () => getEntryPoints(config),
@@ -87,7 +89,7 @@ Object {
       },
       Object {
         "exclude": Array [
-          /\\\\\\.module\\\\\\.css\\$/,
+          /\\\\\\.module\\\\\\.scss\\$/,
         ],
         "test": /\\\\\\.\\(sc\\|sa\\)ss\\$/,
         "use": Array [

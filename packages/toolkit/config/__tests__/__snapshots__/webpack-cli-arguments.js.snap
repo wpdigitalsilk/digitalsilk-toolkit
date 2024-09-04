@@ -90,7 +90,7 @@ Object {
       },
       Object {
         "exclude": Array [
-          /\\\\\\.module\\\\\\.css\\$/,
+          /\\\\\\.module\\\\\\.scss\\$/,
         ],
         "test": /\\\\\\.\\(sc\\|sa\\)ss\\$/,
         "use": Array [
@@ -279,7 +279,7 @@ Object {
       },
       Object {
         "exclude": Array [
-          /\\\\\\.module\\\\\\.css\\$/,
+          /\\\\\\.module\\\\\\.scss\\$/,
         ],
         "test": /\\\\\\.\\(sc\\|sa\\)ss\\$/,
         "use": Array [
@@ -472,7 +472,7 @@ Object {
       },
       Object {
         "exclude": Array [
-          /\\\\\\.module\\\\\\.css\\$/,
+          /\\\\\\.module\\\\\\.scss\\$/,
         ],
         "test": /\\\\\\.\\(sc\\|sa\\)ss\\$/,
         "use": Array [
@@ -665,7 +665,7 @@ Object {
       },
       Object {
         "exclude": Array [
-          /\\\\\\.module\\\\\\.css\\$/,
+          /\\\\\\.module\\\\\\.scss\\$/,
         ],
         "test": /\\\\\\.\\(sc\\|sa\\)ss\\$/,
         "use": Array [
@@ -880,7 +880,7 @@ Object {
       },
       Object {
         "exclude": Array [
-          /\\\\\\.module\\\\\\.css\\$/,
+          /\\\\\\.module\\\\\\.scss\\$/,
         ],
         "test": /\\\\\\.\\(sc\\|sa\\)ss\\$/,
         "use": Array [
@@ -1091,7 +1091,7 @@ Object {
       },
       Object {
         "exclude": Array [
-          /\\\\\\.module\\\\\\.css\\$/,
+          /\\\\\\.module\\\\\\.scss\\$/,
         ],
         "test": /\\\\\\.\\(sc\\|sa\\)ss\\$/,
         "use": Array [
