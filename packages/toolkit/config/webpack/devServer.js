@@ -1,3 +1,5 @@
+const { resolve, join } = require('path');
+
 module.exports = ({ isPackage, projectConfig: { devServer, devURL, hot, devServerPort } }) => {
 	if (!devServer && !hot) {
 		return undefined;
@@ -11,7 +13,7 @@ module.exports = ({ isPackage, projectConfig: { devServer, devURL, hot, devServe
 	}
 
 	if (!isPackage && hot) {
-		const allowedHosts = ['.test', '.local'];
+		const allowedHosts = ['.test', '.local', '.dev'];
 
 		try {
 			allowedHosts.push(new URL(devURL).host);
@@ -23,6 +25,7 @@ module.exports = ({ isPackage, projectConfig: { devServer, devURL, hot, devServe
 			devMiddleware: {
 				writeToDisk: true,
 			},
+			static: resolve(process.cwd(), join('dist')),
 			// by default allow any .test subdomains plus the devURL hostname
 			allowedHosts,
 			hot: true,

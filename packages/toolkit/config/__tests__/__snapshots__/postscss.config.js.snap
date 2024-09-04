@@ -250,6 +250,11 @@ a c, b c, a d, b d {
 exports[`postcss.config.js build a proper postcss config file for non-editor styles: env=development 1`] = `
 Object {
   "plugins": Object {
+    "@csstools/postcss-global-data": Object {
+      "files": Array [
+        "/Users/stefan/SAJTOVI/digital-silk/digitalsilk-toolkit/packages/toolkit/assets/css/frontend/global/custom-media-queries.css",
+      ],
+    },
     "cssnano": false,
     "postcss-current-selector": Object {},
     "postcss-custom-media": Object {},
@@ -271,11 +276,16 @@ Object {
 exports[`postcss.config.js build a proper postcss config file for non-editor styles: env=production 1`] = `
 Object {
   "plugins": Object {
+    "@csstools/postcss-global-data": Object {
+      "files": Array [
+        "/Users/stefan/SAJTOVI/digital-silk/digitalsilk-toolkit/packages/toolkit/assets/css/frontend/global/custom-media-queries.css",
+      ],
+    },
     "cssnano": Object {
       "preset": Array [
         "default",
         Object {
-          "autoprefixer": false,
+          "autoprefixer": true,
           "calc": Object {
             "precision": 8,
           },
@@ -308,6 +318,11 @@ Object {
 exports[`postcss.config.js builds a proper postcss config file for editor styles: env=development 1`] = `
 Object {
   "plugins": Object {
+    "@csstools/postcss-global-data": Object {
+      "files": Array [
+        "/Users/stefan/SAJTOVI/digital-silk/digitalsilk-toolkit/packages/toolkit/assets/css/frontend/global/custom-media-queries.css",
+      ],
+    },
     "cssnano": false,
     "postcss-current-selector": Object {},
     "postcss-custom-media": Object {},
@@ -351,11 +366,16 @@ Object {
 exports[`postcss.config.js builds a proper postcss config file for editor styles: env=production 1`] = `
 Object {
   "plugins": Object {
+    "@csstools/postcss-global-data": Object {
+      "files": Array [
+        "/Users/stefan/SAJTOVI/digital-silk/digitalsilk-toolkit/packages/toolkit/assets/css/frontend/global/custom-media-queries.css",
+      ],
+    },
     "cssnano": Object {
       "preset": Array [
         "default",
         Object {
-          "autoprefixer": false,
+          "autoprefixer": true,
           "calc": Object {
             "precision": 8,
           },
