@@ -1,36 +1,31 @@
 {
-	"name": "@digitalsilk/stylelint-config",
-	"version": "1.1.8",
-	"description": "Digital Silk stylelint config for WP projects",
-	"main": "index.js",
-	"homepage": "https://github.com/wpdigitalsilk/digitalsilk-toolkit/tree/develop/packages/stylelint-config#readme",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/wpdigitalsilk/digitalsilk-toolkit.git",
-		"directory": "packages/stylelint-config"
-	},
-	"publishConfig": {
-		"access": "public"
-	},
-	"scripts": {
-		"lint": "eslint ."
-	},
-	"files": [
-		"index.js",
-		"scss.js"
-	],
-	"author": "Digital Silk",
-	"license": "GPL-2.0-or-later",
-	"engineStrict": true,
-	"engines": {
-		"node": "^14.0.0 || ^16.0.0 || ^18.0.0 || ^20.0.0"
-	},
-	"dependencies": {
-		"@digitalsilk/eslint-config": "^1.1.8",
-		"stylelint": "^15.0.0",
-		"stylelint-config-recommended": "^13.0.0",
-		"stylelint-config-standard-scss": "^11.1.0",
-		"stylelint-order": "^6.0.3",
-		"stylelint-stylistic": "^0.4.3"
-	}
+    "name": "@digitalsilk/stylelint-config",
+    "version": "1.1.9",
+    "description": "Digital Silk stylelint config for WP projects",
+    "main": "index.js",
+    "homepage": "https://github.com/wpdigitalsilk/digitalsilk-toolkit/blob/master/packages/stylelint-config/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wpdigitalsilk/digitalsilk-toolkit.git",
+        "directory": "packages/stylelint-config"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "index.js",
+        "scss.js"
+    ],
+    "author": "Digital Silk",
+    "license": "GPL-2.0-or-later",
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "dependencies": {
+        "@stylistic/stylelint-plugin": "^3.0.1",
+        "stylelint": "^16.9.0",
+        "stylelint-config-recommended": "^14.0.1",
+        "stylelint-config-standard-scss": "^13.1.0",
+        "stylelint-order": "^6.0.4"
+    }
 }

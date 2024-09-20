@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.9
+
+### Patch Changes
+
+- Update stylelint versions
+
 ## 1.1.8
 
 ### Patch Changes
