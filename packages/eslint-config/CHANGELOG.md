@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.9
+
+### Patch Changes
+
+- Update stylelint versions
+- Updated dependencies
+  - @digitalsilk/babel-preset-default@1.1.9
+
 ## 1.1.8
 
 ### Patch Changes
