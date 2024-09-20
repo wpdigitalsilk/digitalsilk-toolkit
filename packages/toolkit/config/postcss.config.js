@@ -1,6 +1,11 @@
 const path = require('path');
 
 module.exports = ({ file, env }) => {
+	const isTestingEnv = process.env.NODE_ENV === 'test';
+
+	const customMediaQueriesPath = isTestingEnv
+		? path.resolve(process.cwd(), 'config/__tests__/__fixtures__/custom-media-queries.mock.css')
+		: path.resolve(process.cwd(), 'assets/css/frontend/global/custom-media-queries.css');
 	const config = {
 		plugins: {
 			'postcss-import': {},
@@ -13,7 +18,7 @@ module.exports = ({ file, env }) => {
 				},
 			},
 			'@csstools/postcss-global-data': {
-				files: [path.resolve(process.cwd(), 'assets/css/frontend/global/custom-media-queries.css')],
+				files: [customMediaQueriesPath],
 			},
 			'postcss-custom-media': {},
 			'postcss-nested-ancestors': {},

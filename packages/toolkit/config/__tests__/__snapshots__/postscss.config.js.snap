@@ -230,6 +230,7 @@ exports[`postcss transforms mixins properly 1`] = `
 
 	position: relative;
 }
+
 img::before {
 		content: \\"\\";
 		display: block;
@@ -241,8 +242,7 @@ img::before {
 exports[`postcss transforms nesting.css properly 1`] = `
 "a, b {
   color: red;
-}
-a c, b c, a d, b d {
+}a c, b c, a d, b d {
     color: white;
   }"
 `;
@@ -252,7 +252,7 @@ Object {
   "plugins": Object {
     "@csstools/postcss-global-data": Object {
       "files": Array [
-        "/Users/stefan/SAJTOVI/digital-silk/digitalsilk-toolkit/packages/toolkit/assets/css/frontend/global/custom-media-queries.css",
+        "/Users/stefan/SAJTOVI/digital-silk/digitalsilk-toolkit/packages/toolkit/config/__tests__/__fixtures__/custom-media-queries.mock.css",
       ],
     },
     "cssnano": false,
@@ -278,7 +278,7 @@ Object {
   "plugins": Object {
     "@csstools/postcss-global-data": Object {
       "files": Array [
-        "/Users/stefan/SAJTOVI/digital-silk/digitalsilk-toolkit/packages/toolkit/assets/css/frontend/global/custom-media-queries.css",
+        "/Users/stefan/SAJTOVI/digital-silk/digitalsilk-toolkit/packages/toolkit/config/__tests__/__fixtures__/custom-media-queries.mock.css",
       ],
     },
     "cssnano": Object {
@@ -320,7 +320,7 @@ Object {
   "plugins": Object {
     "@csstools/postcss-global-data": Object {
       "files": Array [
-        "/Users/stefan/SAJTOVI/digital-silk/digitalsilk-toolkit/packages/toolkit/assets/css/frontend/global/custom-media-queries.css",
+        "/Users/stefan/SAJTOVI/digital-silk/digitalsilk-toolkit/packages/toolkit/config/__tests__/__fixtures__/custom-media-queries.mock.css",
       ],
     },
     "cssnano": false,
@@ -368,7 +368,7 @@ Object {
   "plugins": Object {
     "@csstools/postcss-global-data": Object {
       "files": Array [
-        "/Users/stefan/SAJTOVI/digital-silk/digitalsilk-toolkit/packages/toolkit/assets/css/frontend/global/custom-media-queries.css",
+        "/Users/stefan/SAJTOVI/digital-silk/digitalsilk-toolkit/packages/toolkit/config/__tests__/__fixtures__/custom-media-queries.mock.css",
       ],
     },
     "cssnano": Object {
