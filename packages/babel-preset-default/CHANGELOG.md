@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.4
+
+### Patch Changes
+
+-   Stylelint config
+-   Updated dependencies
+    -   @digitalsilk/eslint-config@1.2.4
+
 ## 1.2.3
 
 ### Patch Changes

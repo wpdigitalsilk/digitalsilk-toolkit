@@ -1,0 +1,5 @@
+{
+  "extends": [
+    "@digitalsilk/stylelint-config"
+  ]
+}
