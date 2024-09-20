@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.5
+
+### Patch Changes
+
+-   update eslint deps
+
 ## 1.2.4
 
 ### Patch Changes

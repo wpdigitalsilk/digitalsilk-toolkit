@@ -14,8 +14,6 @@ const getConfigFile = () => {
 	return configArgs[0].replace('--config-file=', '');
 };
 
-console.log('Test')
-
 /**
  * Consolidate results.
  *
