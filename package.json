@@ -17,7 +17,6 @@
     "workspaces": [
         "packages/*"
     ],
-    "bundleDependencies": false,
     "description": "Collection of reusable scripts for development.",
     "engines": {
         "node": ">=14",

@@ -1,5 +1,5 @@
 const config = {
-	extends: ['@digitalsilk/stylelint-config/scss'],
+	extends: ['@digitalsilk/stylelint-config'],
 };
 
 module.exports = config;
