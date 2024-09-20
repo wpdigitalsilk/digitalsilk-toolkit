@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.2.3
+
+### Patch Changes
+
+-   Update stylelint
+-   Updated dependencies
+    -   @digitalsilk/babel-preset-default@1.2.3
+    -   @digitalsilk/stylelint-config@1.2.3
+    -   @digitalsilk/eslint-config@1.2.3
+
 ## 1.2.2
 
 ### Patch Changes
