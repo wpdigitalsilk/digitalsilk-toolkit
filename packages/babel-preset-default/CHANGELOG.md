@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.3.7
+
+### Patch Changes
+
+-   Update sass
+-   Updated dependencies
+    -   @digitalsilk/eslint-config@1.3.7
+
 ## 1.3.6
 
 ### Patch Changes

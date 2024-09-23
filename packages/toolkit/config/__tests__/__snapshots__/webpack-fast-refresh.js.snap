@@ -87,8 +87,10 @@ exports[`webpack.config.js includes react-webpack-fast-refresh with the --hot op
           {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": {
+              "api": "legacy",
               "sassOptions": {
                 "quietDeps": true,
+                "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
             },
@@ -120,8 +122,10 @@ exports[`webpack.config.js includes react-webpack-fast-refresh with the --hot op
           {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": {
+              "api": "legacy",
               "sassOptions": {
                 "quietDeps": true,
+                "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
             },
@@ -152,8 +156,10 @@ exports[`webpack.config.js includes react-webpack-fast-refresh with the --hot op
           {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": {
+              "api": "legacy",
               "sassOptions": {
                 "quietDeps": true,
+                "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
             },

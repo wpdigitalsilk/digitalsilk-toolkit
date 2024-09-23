@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.7
+
+### Patch Changes
+
+-   Update sass
+
 ## 1.3.6
 
 ### Patch Changes
