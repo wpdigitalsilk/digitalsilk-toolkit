@@ -1,6 +1,5 @@
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const { hasBabelConfig, hasPostCSSConfig, fromConfigRoot } = require('../../utils');
-const { isPackageInstalled } = require('../../utils/package');
 
 const getCSSLoaders = ({ options, postcss, sass }) => {
 	// Note that the order of loaders is important. The loaders are applied from right to left.
@@ -30,7 +29,7 @@ const getCSSLoaders = ({ options, postcss, sass }) => {
 			options: {
 				api: 'legacy',
 				sourceMap: options ? options.sourceMap : false,
-				// implementation: require.resolve('sass'),
+				implementation: require.resolve('sass-embedded'),
 				sassOptions: {
 					quietDeps: true,
 					suppressDeprecationWarnings: true,
@@ -80,7 +79,7 @@ module.exports = ({ isProduction, isPackage, defaultTargets, projectConfig: { wo
 						},
 					],
 				],
-			}
+		  }
 		: {};
 
 	return {
