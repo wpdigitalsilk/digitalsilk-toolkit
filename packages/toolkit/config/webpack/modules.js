@@ -28,9 +28,12 @@ const getCSSLoaders = ({ options, postcss, sass }) => {
 		sass && {
 			loader: require.resolve('sass-loader'),
 			options: {
+				api: 'legacy',
 				sourceMap: options ? options.sourceMap : false,
+				// implementation: require.resolve('sass'),
 				sassOptions: {
 					quietDeps: true,
+					suppressDeprecationWarnings: true,
 				},
 			},
 		},
