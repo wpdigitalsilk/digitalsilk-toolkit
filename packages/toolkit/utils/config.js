@@ -3,7 +3,7 @@
  */
 const { existsSync: fileExists } = require('fs');
 const path = require('path');
-const camelcase = require('camelcase');
+const camelCase = require('camelcase');
 const { hasArgInCLI, getArgFromCLI } = require('./cli');
 const { fromConfigRoot, fromProjectRoot, hasProjectFile } = require('./file');
 const { hasPackageProp, getPackage } = require('./package');
@@ -177,7 +177,7 @@ const safeVariableName = (name) => {
 	const INVALID_ES3_IDENT = /((^[^a-zA-Z]+)|[^\w.-])|([^a-zA-Z0-9]+$)/g;
 	const normalized = removeScope(name).toLowerCase();
 	const identifier = normalized.replace(INVALID_ES3_IDENT, '');
-	return camelcase(identifier);
+	return camelCase(identifier);
 };
 
 /**
