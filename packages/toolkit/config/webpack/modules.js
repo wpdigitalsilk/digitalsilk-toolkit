@@ -13,7 +13,6 @@ const getCSSLoaders = ({ options, postcss, sass }) => {
 			loader: require.resolve('css-loader'),
 			options,
 		},
-
 		postcss && {
 			loader: require.resolve('postcss-loader'),
 			options: {
@@ -33,7 +32,7 @@ const getCSSLoaders = ({ options, postcss, sass }) => {
 				sassOptions: {},
 			},
 		},
-		require.resolve('sass-loader'),
+		// require.resolve('sass-loader'),
 	].filter(Boolean);
 };
 
@@ -76,7 +75,7 @@ module.exports = ({ isProduction, isPackage, defaultTargets, projectConfig: { wo
 						},
 					],
 				],
-		  }
+			}
 		: {};
 
 	return {
