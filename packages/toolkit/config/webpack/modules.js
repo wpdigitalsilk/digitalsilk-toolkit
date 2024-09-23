@@ -127,7 +127,7 @@ module.exports = ({ isProduction, isPackage, defaultTargets, projectConfig: { wo
 						postcss: true,
 						sass: true,
 					}),
-					require.resolve('sass-loader'),
+					// require.resolve('sass-loader'),
 				],
 				exclude: [/\.module\.scss$/],
 			},
