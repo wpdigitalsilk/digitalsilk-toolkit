@@ -46,10 +46,7 @@ module.exports = ({
 					.filter((rawFilepath) => rawFilepath && rawFilepath.startsWith('file:')) // assets can be files or handles. we only want files
 					.forEach((rawFilepath) => {
 						// Removes the `file:` prefix.
-						const filepath = join(
-							dirname(blockMetadataFile),
-							rawFilepath.replace('file:', ''),
-						);
+						const filepath = join(dirname(blockMetadataFile), rawFilepath.replace('file:', ''));
 
 						// get the entrypoint name from the filepath by removing the blocks source directory and the file extension
 						const entryName = filepath
@@ -60,10 +57,7 @@ module.exports = ({
 						// Detects the proper file extension used in the defined source directory.
 						const [entryFilepath] = glob(
 							// glob only accepts forward-slashes this is required to make things work on Windows
-							`${blocksSourceDirectory.replace(
-								/\\/g,
-								'/',
-							)}/${entryName}.([jt]s?(x)|?(s)css)`,
+							`${blocksSourceDirectory.replace(/\\/g, '/')}/${entryName}.([jt]s?(x)|?(s)css)`,
 							{
 								absolute: true,
 							},
@@ -103,9 +97,7 @@ module.exports = ({
 
 			if (typeof packageType === 'undefined' || packageType !== 'none') {
 				config.main.library = {
-					type: ['commonjs2', 'commonjs', 'all'].includes(packageType)
-						? 'commonjs2'
-						: packageType,
+					type: ['commonjs2', 'commonjs', 'all'].includes(packageType) ? 'commonjs2' : packageType,
 				};
 			}
 		}

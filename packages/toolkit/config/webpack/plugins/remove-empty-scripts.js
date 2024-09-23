@@ -86,9 +86,7 @@ class WebpackRemoveEmptyScriptsPlugin {
 		}
 
 		if (Array.isArray(this.options.extensions)) {
-			const pattern = this.options.extensions
-				.map((etx) => (etx[0] === '.' ? etx.substring(1) : etx))
-				.join('|');
+			const pattern = this.options.extensions.map((etx) => (etx[0] === '.' ? etx.substring(1) : etx)).join('|');
 			// note: the pattern must match a resource with a query, e.g.: style.css?key=val
 			this.options.extensions = new RegExp(`.(${pattern})([?].*)?$`);
 		}
@@ -130,14 +128,11 @@ class WebpackRemoveEmptyScriptsPlugin {
 
 				const resources =
 					ignoreEntryResource.length > 0
-						? entryResources.filter((res) =>
-								ignoreEntryResource.every((item) => !res.match(item)),
-						  )
+						? entryResources.filter((res) => ignoreEntryResource.every((item) => !res.match(item)))
 						: entryResources;
 
 				const isEmptyScript =
-					resources.length > 0 &&
-					resources.every((resource) => styleExtensionRegexp.test(resource));
+					resources.length > 0 && resources.every((resource) => styleExtensionRegexp.test(resource));
 
 				if (isEmptyScript) {
 					if (this.verbose) {

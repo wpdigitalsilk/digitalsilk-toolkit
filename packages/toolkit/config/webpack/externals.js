@@ -15,6 +15,6 @@ module.exports = ({ isPackage, packageConfig: { externals, packageType } }) => {
 
 	return {
 		jquery: 'jQuery',
-		lodash: 'lodash'
+		lodash: 'lodash',
 	};
 };

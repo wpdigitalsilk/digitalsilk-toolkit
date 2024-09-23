@@ -29,9 +29,7 @@ const hasPrettierConfig = () =>
 	hasPackageProp('prettier');
 
 const hasWebpackConfig = () =>
-	hasArgInCLI('--config') ||
-	hasProjectFile('webpack.config.js') ||
-	hasProjectFile('webpack.config.babel.js');
+	hasArgInCLI('--config') || hasProjectFile('webpack.config.js') || hasProjectFile('webpack.config.babel.js');
 
 // See https://github.com/michael-ciniawsky/postcss-load-config#usage (used by postcss-loader).
 const hasPostCSSConfig = () =>
@@ -62,9 +60,7 @@ const hasEslintConfig = () =>
 	hasPackageProp('eslintConfig');
 
 const hasJestConfig = () =>
-	hasProjectFile('jest.config.js') ||
-	hasProjectFile('jest.config.json') ||
-	hasPackageProp('jest');
+	hasProjectFile('jest.config.js') || hasProjectFile('jest.config.json') || hasPackageProp('jest');
 
 const hasTsConfig = () => hasProjectFile('tsconfig.json');
 
@@ -87,12 +83,12 @@ function getJestOverrideConfigFile(suffix) {
 		return undefined;
 	}
 
-	if (hasProjectFile(`jest-${ suffix }.config.js`)) {
-		return fromProjectRoot(`jest-${ suffix }.config.js`);
+	if (hasProjectFile(`jest-${suffix}.config.js`)) {
+		return fromProjectRoot(`jest-${suffix}.config.js`);
 	}
 
 	if (!hasJestConfig()) {
-		return fromConfigRoot(`jest-${ suffix }.config.js`);
+		return fromConfigRoot(`jest-${suffix}.config.js`);
 	}
 
 	return undefined;
@@ -120,9 +116,7 @@ const getDefaultConfig = () => {
 		hot,
 		// true by default (if DS_NO_EXTERNALS is not set)
 		// if DS_NO_EXTERNALS is truthy then dependencyExternals is false
-		wpDependencyExternals:
-			typeof process.env.DS_NO_EXTERNALS === 'undefined' ||
-			!process.env.DS_NO_EXTERNALS,
+		wpDependencyExternals: typeof process.env.DS_NO_EXTERNALS === 'undefined' || !process.env.DS_NO_EXTERNALS,
 		publicPath: process.env.ASSET_PATH || '/',
 		useBlockAssets: true,
 		include,

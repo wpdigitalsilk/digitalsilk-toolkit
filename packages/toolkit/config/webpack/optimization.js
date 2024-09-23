@@ -111,9 +111,9 @@ module.exports = ({ isProduction, projectConfig: { hot, analyze } }) => {
 							});
 						} catch (error) {
 							if (error.name === 'SvgoParserError') {
-								error.message = `parsing svg, it sounds like your svg is invalid: ${ error.message }`;
+								error.message = `parsing svg, it sounds like your svg is invalid: ${error.message}`;
 							} else {
-								error.message = `Something went wrong when parsing ${ original.filename }`;
+								error.message = `Something went wrong when parsing ${original.filename}`;
 							}
 
 							// Return original input if there was an error

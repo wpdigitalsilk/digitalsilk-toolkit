@@ -12,8 +12,8 @@ const kb = (size) => {
 module.exports = ({ mode }) => {
 	if (mode === 'production') {
 		return {
-			maxAssetSize: kb(100),
-			maxEntrypointSize: kb(400),
+			maxAssetSize: kb(250),
+			maxEntrypointSize: kb(500),
 			hints: 'warning',
 		};
 	}

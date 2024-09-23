@@ -1,11 +1,7 @@
 /**
  * Internal dependencies
  */
-const {
-	getBuildFiles,
-	getDSScriptsConfig,
-	getDSScriptsPackageBuildConfig,
-} = require('../utils');
+const { getBuildFiles, getDSScriptsConfig, getDSScriptsPackageBuildConfig } = require('../utils');
 
 const {
 	getEntryPoints,
@@ -31,13 +27,7 @@ const isPackage = typeof source !== 'undefined' && typeof main !== 'undefined';
 const isProduction = process.env.NODE_ENV === 'production';
 const mode = isProduction ? 'production' : 'development';
 
-const defaultTargets = [
-	'> 1%',
-	'Firefox ESR',
-	'last 2 versions',
-	'not ie <= 11',
-	'not ie_mob <=11',
-];
+const defaultTargets = ['> 1%', 'Firefox ESR', 'last 2 versions', 'not ie <= 11', 'not ie_mob <=11'];
 
 const config = {
 	projectConfig,

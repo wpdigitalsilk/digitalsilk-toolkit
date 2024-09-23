@@ -24,17 +24,14 @@ class CleanExtractedDeps {
 					}
 				});
 
-				if (
-					entrypoint.origins[0].request.match(/\.css$/) &&
-					entryPointPath &&
-					compilationAssetMatch
-				) {
+				if (entrypoint.origins[0].request.match(/\.css$/) && entryPointPath && compilationAssetMatch) {
 					const source = compilation.assets[compilationAssetMatch].source();
 
 					delete compilation.assets[compilationAssetMatch];
 
-					compilation.assets[entryPointPath.replace('.css', '.asset.php')] =
-						new RawSource(source.replace(/('|")wp-polyfill('|")[\s]*,?/, ''));
+					compilation.assets[entryPointPath.replace('.css', '.asset.php')] = new RawSource(
+						source.replace(/('|")wp-polyfill('|")[\s]*,?/, ''),
+					);
 				}
 			}
 		});
