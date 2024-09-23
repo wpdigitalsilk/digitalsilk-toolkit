@@ -33,6 +33,7 @@ const getCSSLoaders = ({ options, postcss, sass }) => {
 				sassOptions: {
 					quietDeps: true,
 					suppressDeprecationWarnings: true,
+					silenceDeprecations: ['legacy-js-api'],
 				},
 			},
 		},
