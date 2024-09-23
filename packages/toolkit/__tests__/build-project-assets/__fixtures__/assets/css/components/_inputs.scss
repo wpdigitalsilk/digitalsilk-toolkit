@@ -1,0 +1,302 @@
+/* Input Components */
+
+.site-wrapper,
+.ds-form-block {
+	input[type="color"],
+	input[type="datetime-local"],
+	input[type="datetime"],
+	input[type="month"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="time"],
+	input[type="url"],
+	input[type="week"],
+	input[type="date"],
+	input[type="email"],
+	input[type="file"],
+	input[type="number"],
+	input[type="phone"],
+	input[type="text"],
+	select,
+	textarea {
+		width: 100%;
+		max-width: 100%;
+		padding: 12px 15px;
+		background: #fff;
+		border: none;
+		border-bottom: 1px solid rgba(27, 44, 92, 0.3);
+		border-radius: 0;
+		font-size: 16px;
+		font-weight: 500;
+		transition: all ease 0.3s;
+		color: #1b2c5c;
+		&:focus {
+			outline: 2px solid var(--wp--preset--color--primary-color-2);
+			border-color: #555;
+		}
+	}
+	.gform_wrapper.gravity-theme {
+		.gform_validation_errors {
+			display: none;
+		}
+		.validation_message {
+			position: absolute;
+			padding: 0;
+			font-size: 14px;
+			font-weight: 400;
+			border: none;
+			background: transparent;
+			margin: 5px 0 0 !important;
+			@media (--bp-medium-minus) {
+				margin: 0 !important;
+			}
+		}
+		.gfield {
+			&.gfield--type-checkbox {
+				legend {
+					display: none;
+				}
+			}
+		}
+		.ginput_container {
+			> span {
+				position: relative;
+			}
+			.field-icon {
+				top: 0;
+				left: 0;
+				color: #9654ff;
+				position: absolute;
+				display: flex;
+				align-items: center;
+				z-index: 10;
+				height: 100%;
+				padding: 0 3px !important;
+				justify-content: center;
+				&::after {
+					content: "";
+					position: absolute;
+					left: 0;
+					right: 0;
+					bottom: -1px;
+					height: 3px;
+					border-radius: 2px;
+					background-color: #9654ff;
+				}
+				svg {
+					pointer-events: none;
+					width: 16px;
+					height: 16px;
+				}
+			}
+			&.ginput_container_textarea {
+				.field-icon {
+					padding-top: 14px !important;
+					align-items: flex-start;
+				}
+			}
+		}
+		.gform_footer {
+			button,
+			.button {
+				margin-bottom: 0;
+			}
+		}
+		.gfield_checkbox {
+			position: relative;
+			input[type="checkbox"] {
+				opacity: 0;
+				position: absolute;
+			}
+			label {
+				--wp--preset--color--link-color: #9654ff;
+				--wp--preset--color--link-hover: #9654ff;
+				position: relative;
+				display: block;
+				padding-left: 30px;
+				user-select: none;
+				&::before,
+				&::after {
+					content: "";
+					position: absolute;
+					top: 1px;
+					left: 0;
+					width: 20px;
+					height: 20px;
+					border-radius: 3px;
+				}
+				&::before {
+					background-color: #fff;
+					border: 1px solid #d2d4df;
+					pointer-events: none;
+					transition: all 0.2s;
+				}
+				&::after {
+					background-image: url("data:image/svg+xml,%3Csvg width='9' height='10' viewBox='0 0 9 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.95474 1.1456C8.87225 0.870687 8.68603 0.641972 8.42939 0.501016C8.26059 0.407974 8.06897 0.359375 7.87517 0.359375C7.48291 0.359375 7.11362 0.561217 6.91148 0.886717L3.65705 6.12153L1.98774 4.18651C1.77352 3.93768 1.45877 3.79491 1.12471 3.79491C0.880715 3.79491 0.648119 3.86965 0.452339 4.0117C-0.0261577 4.35745 -0.142587 5.0068 0.187576 5.48897L2.88713 9.434C3.09616 9.7392 3.44669 9.92188 3.82474 9.92188C3.8429 9.92188 3.861 9.9208 3.87937 9.91966C4.27346 9.9017 4.63245 9.68015 4.81779 9.34317L8.86782 1.96261C9.00652 1.71017 9.03704 1.42044 8.95476 1.14569L8.95474 1.1456Z' fill='white'/%3E%3C/svg%3E%0A");
+					background-repeat: no-repeat;
+					background-position: center;
+					opacity: 0;
+					transition: all 0.1s;
+					z-index: 1;
+				}
+			}
+			input[type="checkbox"]:checked + label {
+				&::before {
+					border-color: #7e2dff;
+					background: #7e2dff;
+				}
+				&::after {
+					opacity: 1;
+				}
+			}
+		}
+		.has-icon {
+			position: relative;
+			input[type="color"],
+			input[type="datetime-local"],
+			input[type="datetime"],
+			input[type="month"],
+			input[type="password"],
+			input[type="search"],
+			input[type="tel"],
+			input[type="time"],
+			input[type="url"],
+			input[type="week"],
+			input[type="date"],
+			input[type="email"],
+			input[type="file"],
+			input[type="number"],
+			input[type="phone"],
+			input[type="text"],
+			textarea {
+				padding-left: 30px;
+			}
+		}
+		textarea {
+			max-height: 130px;
+			min-height: 80px;
+			display: block;
+		}
+		::placeholder {
+			color: var(--wp--preset--color--primary-color-1);
+		}
+		.gfield_error {
+			color: #e43230;
+			[aria-invalid="true"] {
+				border-color: #e43230;
+			}
+			.field-icon {
+				color: #e43230;
+				&::after {
+					background-color: #e43230;
+				}
+			}
+		}
+	}
+}
+
+.select-wrap {
+	display: grid;
+	grid-template-areas: "select";
+	align-items: center;
+	position: relative;
+	min-width: 100%;
+	max-width: 100%;
+	border: 1px solid #dadada;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: #fff;
+	select,
+	svg {
+		grid-area: select;
+	}
+	> svg {
+		justify-self: end;
+		margin-right: 15px;
+		pointer-events: none;
+		color: #7e2dff;
+	}
+	select {
+		appearance: none;
+		background-color: transparent;
+		border: none;
+		margin: 0;
+		width: 100%;
+		font-family: inherit;
+		cursor: inherit;
+		line-height: inherit;
+		z-index: 1;
+		outline: none;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		max-width: 100%;
+		background-image: none;
+		text-shadow: none;
+		&:focus {
+			outline: 0;
+			border-color: inherit;
+		}
+	}
+	select:focus + .focus {
+		position: absolute;
+		top: -1px;
+		left: -1px;
+		right: -1px;
+		bottom: -1px;
+		border: 2px solid var(--wp--preset--color--primary-color-2);
+		border-radius: 5px;
+	}
+	&.has-icon {
+		position: relative;
+	}
+}
+
+.input-wrap,
+.select-wrap {
+	.field-icon {
+		top: 0;
+		left: 0;
+		color: #9654ff;
+		position: absolute;
+		display: flex;
+		align-items: center;
+		z-index: 10;
+		height: 100%;
+		justify-content: center;
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 3px;
+			border-radius: 2px;
+			background-color: #9654ff;
+			transform: translateY(50%);
+		}
+	}
+	&.has-icon {
+		position: relative;
+		input[type="color"],
+		input[type="datetime-local"],
+		input[type="datetime"],
+		input[type="month"],
+		input[type="password"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="time"],
+		input[type="url"],
+		input[type="week"],
+		input[type="date"],
+		input[type="email"],
+		input[type="file"],
+		input[type="number"],
+		input[type="phone"],
+		input[type="text"],
+		textarea,
+		select {
+			padding-left: 30px;
+		}
+	}
+}

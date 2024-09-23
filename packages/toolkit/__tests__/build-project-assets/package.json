@@ -1,0 +1,10 @@
+{
+	"name": "test-build-project-assets",
+	"digitalsilk-toolkit": {
+		"useBlockAssets": false,
+		"entry": {
+			"frontend": "./__fixtures__/assets/js/frontend.js",
+			"example-block": "./__fixtures__/gutenberg/blocks/example/index.js"
+		}
+	}
+}

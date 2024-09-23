@@ -1,0 +1,112 @@
+/* DS Button Component */
+
+.ds-button,
+.gform-button,
+.gform_button {
+	box-sizing: border-box;
+	word-break: break-word;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	backface-visibility: hidden;
+	position: relative;
+	text-decoration: none;
+	border: none;
+	text-align: center;
+	white-space: nowrap;
+	background: linear-gradient(70deg, #0997fe 6%, #8b3ee7 50%);
+	color: #fff;
+	background-size: 200% 100%;
+	background-position: 0 0;
+	border-radius: 5px;
+	font-size: 16px;
+	line-height: 1;
+	font-family: var(--wp--preset--font-family--primary);
+	font-weight: 500;
+	padding: 9px 10px;
+	transition: all ease 0.3s;
+	user-select: none;
+	span {
+		display: inline-block;
+		&.invalid-link {
+			position: absolute;
+			top: 0;
+			right: 0;
+			> span {
+				width: 14px;
+				height: 14px;
+				font-size: 14px;
+				display: block;
+			}
+		}
+	}
+	&.has-bg {
+		background: transparent;
+	}
+	.icon {
+		pointer-events: none;
+		margin-left: 8px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	&.-lg {
+		padding: 15px 30px;
+		line-height: 1.25;
+	}
+	&.-md {
+		padding: 10px 15px;
+		line-height: 1.5;
+	}
+	&.-icon-only {
+		justify-content: center;
+		.icon {
+			margin: 0;
+		}
+	}
+	&.is-variant-primary {
+		background-color: #32373c;
+		color: #fff;
+	}
+	&.is-variant-secondary {
+		background: #00b646;
+		color: #fff;
+	}
+	&.is-variant-white {
+		background: #fff;
+		color: #1b2c5c;
+		border: 1px solid #d2d4df;
+	}
+	&.is-variant-transparent {
+		background: transparent;
+		color: var(--wp--preset--color--primary-color-2);
+	}
+	&:hover {
+		text-decoration: none;
+		background-position: 95% 0;
+		color: #fff;
+		box-shadow: 0 2px 2px rgba(0, 7, 63, 0.2);
+		&.is-variant-transparent {
+			background: transparent;
+			color: var(--wp--preset--color--primary-color-2);
+			box-shadow: none;
+		}
+		&.is-variant-secondary {
+			background: #74ed71;
+			color: #202c59;
+		}
+		&.is-variant-white {
+			background: #8b3ee7;
+			color: #fff;
+			box-shadow: none;
+			border-color: #8b3ee7;
+		}
+	}
+	&:focus {
+		outline: 2px solid var(--wp--preset--color--primary-color-2);
+	}
+	&[disabled] {
+		opacity: 0.75;
+		cursor: not-allowed;
+		pointer-events: none;
+	}
+}

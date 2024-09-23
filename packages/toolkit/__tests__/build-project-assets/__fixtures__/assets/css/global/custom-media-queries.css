@@ -1,0 +1,48 @@
+/*
+ * Media Queries
+ */
+
+/* 36em */
+
+@custom-media --bp-small-min (min-width: 576px);
+@custom-media --bp-small (max-width: 576px);
+
+/* 48em */
+
+@custom-media --bp-medium-min (min-width: 768px);
+@custom-media --bp-medium (max-width: 768px);
+@custom-media --bp-medium-minus (max-width: 767px);
+
+/* 62em */
+
+@custom-media --bp-large-min (min-width: 992px);
+@custom-media --bp-large (max-width: 992px);
+
+/* 75em */
+
+@custom-media --bp-xlarge-min (min-width: 1200px);
+@custom-media --bp-xlarge (max-width: 1200px);
+
+/* 87.5em */
+
+@custom-media --bp-xxlarge-min (min-width: 1400px);
+@custom-media --bp-xxlarge (max-width: 1400px);
+@custom-media --bp-xxlarge-min-plus (min-width: 1441px);
+
+/* LG */
+
+@custom-media --bp-xxxlarge-min (min-width: 1600px);
+@custom-media --bp-xxxlarge (max-width: 1600px);
+
+/* WP Core Breakpoints (used for the admin bar for example) */
+
+@custom-media --wp-small (min-width: 600px);
+@custom-media --wp-medium-max (max-width: 782px);
+
+/* small phone */
+@custom-media --ph-small (min-width: 461px);
+@custom-media --ph-small-max (max-width: 460px);
+
+/* old phones */
+@custom-media --ph-old (min-width: 400px);
+@custom-media --ph-old-max (max-width: 400px);

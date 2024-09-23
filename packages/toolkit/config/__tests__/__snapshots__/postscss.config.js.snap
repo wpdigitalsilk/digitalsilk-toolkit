@@ -121,7 +121,8 @@ exports[`postcss properly transforms css 1`] = `
 	position: relative;
 }
 
-.uikit__chevron-up, .uikit__chevron-down {
+.uikit__chevron-up,
+.uikit__chevron-down {
 	fill: currentColor;
 	position: absolute;
 	right: 0;
@@ -133,7 +134,8 @@ exports[`postcss properly transforms css 1`] = `
 	display: none;
 }
 
-.uikit__section > .heading > .toggle[aria-expanded="true"] .uikit__chevron-up, .uikit__chevron-down {
+.uikit__section > .heading > .toggle[aria-expanded="true"] .uikit__chevron-up,
+.uikit__chevron-down {
 	display: block;
 }
 
@@ -251,9 +253,7 @@ exports[`postcss.config.js build a proper postcss config file for non-editor sty
 {
   "plugins": {
     "cssnano": false,
-    "postcss-current-selector": {},
     "postcss-custom-media": {},
-    "postcss-extend": {},
     "postcss-import": {
       "resolve": [Function],
     },
@@ -290,9 +290,7 @@ exports[`postcss.config.js build a proper postcss config file for non-editor sty
         },
       ],
     },
-    "postcss-current-selector": {},
     "postcss-custom-media": {},
-    "postcss-extend": {},
     "postcss-import": {
       "resolve": [Function],
     },
@@ -313,7 +311,6 @@ exports[`postcss.config.js builds a proper postcss config file for editor styles
 {
   "plugins": {
     "cssnano": false,
-    "postcss-current-selector": {},
     "postcss-custom-media": {},
     "postcss-editor-styles": {
       "ignore": [
@@ -337,7 +334,6 @@ exports[`postcss.config.js builds a proper postcss config file for editor styles
         "form",
       ],
     },
-    "postcss-extend": {},
     "postcss-import": {
       "resolve": [Function],
     },
@@ -374,7 +370,6 @@ exports[`postcss.config.js builds a proper postcss config file for editor styles
         },
       ],
     },
-    "postcss-current-selector": {},
     "postcss-custom-media": {},
     "postcss-editor-styles": {
       "ignore": [
@@ -398,7 +393,6 @@ exports[`postcss.config.js builds a proper postcss config file for editor styles
         "form",
       ],
     },
-    "postcss-extend": {},
     "postcss-import": {
       "resolve": [Function],
     },

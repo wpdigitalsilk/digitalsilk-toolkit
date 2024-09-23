@@ -30,7 +30,7 @@ module.exports = ({ file, env }) => {
 		plugins: {
 			'postcss-import': importPluginConfig,
 			'postcss-mixins': {},
-			'postcss-extend': {},
+			// 'postcss-extend': {},
 			'postcss-preset-env': {
 				stage: 0,
 				features: {
@@ -40,7 +40,7 @@ module.exports = ({ file, env }) => {
 			'postcss-custom-media': {},
 			'postcss-nested-ancestors': {},
 			'postcss-nested': {},
-			'postcss-current-selector': {},
+			// 'postcss-current-selector': {},
 		},
 	};
 
