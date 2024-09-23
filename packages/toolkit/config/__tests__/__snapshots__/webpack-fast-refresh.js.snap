@@ -122,6 +122,7 @@ exports[`webpack.config.js includes react-webpack-fast-refresh with the --hot op
               "sourceMap": true,
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       {

@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.3.4
+
+### Patch Changes
+
+-   Update scss loader
+-   Updated dependencies
+    -   @digitalsilk/babel-preset-default@1.3.4
+    -   @digitalsilk/stylelint-config@1.3.4
+    -   @digitalsilk/eslint-config@1.3.4
+
 ## 1.3.3
 
 ### Patch Changes

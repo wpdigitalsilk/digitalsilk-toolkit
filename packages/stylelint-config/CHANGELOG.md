@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.4
+
+### Patch Changes
+
+-   Update scss loader
+
 ## 1.3.3
 
 ### Patch Changes

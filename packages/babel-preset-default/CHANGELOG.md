@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.3.4
+
+### Patch Changes
+
+-   Update scss loader
+-   Updated dependencies
+    -   @digitalsilk/eslint-config@1.3.4
+
 ## 1.3.3
 
 ### Patch Changes

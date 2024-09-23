@@ -125,6 +125,7 @@ exports[`webpack.config.js adds devServer config when passing the --dev-server f
               "sourceMap": true,
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       {
@@ -316,6 +317,7 @@ exports[`webpack.config.js allows changing browsersync port 1`] = `
               "sourceMap": true,
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       {
@@ -513,6 +515,7 @@ exports[`webpack.config.js includes webpack-bundle-analyzer when using --analyze
               "sourceMap": false,
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       {
@@ -710,6 +713,7 @@ exports[`webpack.config.js includes webpack-bundle-analyzer when using --analyze
               "sourceMap": true,
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       {
@@ -931,6 +935,7 @@ exports[`webpack.config.js returns proper configs for package config with common
               "sourceMap": true,
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       {
@@ -1146,6 +1151,7 @@ exports[`webpack.config.js takes the --target option into account 1`] = `
               "sourceMap": true,
             },
           },
+          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       {
