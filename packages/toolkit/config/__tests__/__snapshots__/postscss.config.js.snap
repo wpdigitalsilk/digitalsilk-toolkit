@@ -254,7 +254,9 @@ exports[`postcss.config.js build a proper postcss config file for non-editor sty
     "postcss-current-selector": {},
     "postcss-custom-media": {},
     "postcss-extend": {},
-    "postcss-import": {},
+    "postcss-import": {
+      "resolve": [Function],
+    },
     "postcss-mixins": {},
     "postcss-nested": {},
     "postcss-nested-ancestors": {},
@@ -291,7 +293,9 @@ exports[`postcss.config.js build a proper postcss config file for non-editor sty
     "postcss-current-selector": {},
     "postcss-custom-media": {},
     "postcss-extend": {},
-    "postcss-import": {},
+    "postcss-import": {
+      "resolve": [Function],
+    },
     "postcss-mixins": {},
     "postcss-nested": {},
     "postcss-nested-ancestors": {},
@@ -334,7 +338,9 @@ exports[`postcss.config.js builds a proper postcss config file for editor styles
       ],
     },
     "postcss-extend": {},
-    "postcss-import": {},
+    "postcss-import": {
+      "resolve": [Function],
+    },
     "postcss-mixins": {},
     "postcss-nested": {},
     "postcss-nested-ancestors": {},
@@ -393,7 +399,9 @@ exports[`postcss.config.js builds a proper postcss config file for editor styles
       ],
     },
     "postcss-extend": {},
-    "postcss-import": {},
+    "postcss-import": {
+      "resolve": [Function],
+    },
     "postcss-mixins": {},
     "postcss-nested": {},
     "postcss-nested-ancestors": {},

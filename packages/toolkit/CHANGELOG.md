@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.3.1
+
+### Patch Changes
+
+-   Update postcss import config
+-   Updated dependencies
+    -   @digitalsilk/babel-preset-default@1.3.1
+    -   @digitalsilk/stylelint-config@1.3.1
+    -   @digitalsilk/eslint-config@1.3.1
+
 ## 1.3.0
 
 ### Minor Changes
