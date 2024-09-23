@@ -99,7 +99,6 @@ exports[`webpack.config.js properly detects user config files in package mode 1`
               "sourceMap": true,
             },
           },
-          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       {
@@ -288,7 +287,6 @@ exports[`webpack.config.js properly detects user config files in project mode 1`
               "sourceMap": true,
             },
           },
-          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       {
@@ -510,7 +508,6 @@ exports[`webpack.config.js returns proper configs for package config 1`] = `
               "sourceMap": true,
             },
           },
-          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       {
@@ -726,7 +723,6 @@ exports[`webpack.config.js returns proper configs for package config with common
               "sourceMap": true,
             },
           },
-          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       {
@@ -943,7 +939,6 @@ exports[`webpack.config.js returns proper configs for package config with peer d
               "sourceMap": true,
             },
           },
-          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       {
@@ -1158,7 +1153,6 @@ exports[`webpack.config.js returns proper configs for project configs 1`] = `
               "sourceMap": true,
             },
           },
-          "/node_modules/sass-loader/dist/cjs.js",
         ],
       },
       {
