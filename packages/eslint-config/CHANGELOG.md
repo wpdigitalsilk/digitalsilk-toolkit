@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.3.3
+
+### Patch Changes
+
+-   remove legacy plugins for postcss
+-   Updated dependencies
+    -   @digitalsilk/babel-preset-default@1.3.3
+
 ## 1.3.2
 
 ### Patch Changes

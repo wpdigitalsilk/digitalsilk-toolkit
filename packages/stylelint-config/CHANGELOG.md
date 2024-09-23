@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.3
+
+### Patch Changes
+
+-   remove legacy plugins for postcss
+
 ## 1.3.2
 
 ### Patch Changes
