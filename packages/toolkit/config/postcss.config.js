@@ -1,11 +1,30 @@
+const fs = require('fs');
 const path = require('path');
 
 module.exports = ({ file, env }) => {
 	const isTestingEnv = process.env.NODE_ENV === 'test';
 
+	const importPluginConfig = {
+		resolve: (id, basedir, importOptions) => {
+			const extensions = ['.css', '.scss'];
+			const fileExtension = path.extname(id);
+
+			if (!fileExtension) {
+				for (const extension of extensions) {
+					const filePath = path.resolve(basedir, id + extension);
+					if (fs.existsSync(filePath)) {
+						return filePath;
+					}
+				}
+			}
+
+			return id;
+		},
+	};
+
 	const config = {
 		plugins: {
-			'postcss-import': {},
+			'postcss-import': importPluginConfig,
 			'postcss-mixins': {},
 			'postcss-extend': {},
 			'postcss-preset-env': {

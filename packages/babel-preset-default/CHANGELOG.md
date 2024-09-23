@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.3.1
+
+### Patch Changes
+
+-   Update postcss import config
+-   Updated dependencies
+    -   @digitalsilk/eslint-config@1.3.1
+
 ## 1.3.0
 
 ### Minor Changes
