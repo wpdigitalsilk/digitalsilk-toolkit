@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.8
+
+### Patch Changes
+
+-   Update babel config
+
 ## 1.2.7
 
 ### Patch Changes
