@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.0
+
+### Minor Changes
+
+-   Update dependencies
+
 ## 1.2.9
 
 ### Patch Changes
