@@ -10,12 +10,7 @@ class DSToolkitTscPlugin {
 				logger.info('tsconfig.json detected, running tsc');
 				const result = spawn.sync(
 					resolveBin('typescript', { executable: 'tsc' }),
-					[
-						'--project',
-						fromProjectRoot('tsconfig.json'),
-						'--outDir',
-						fromProjectRoot('dist'),
-					],
+					['--project', fromProjectRoot('tsconfig.json'), '--outDir', fromProjectRoot('dist')],
 					{
 						stdio: 'inherit',
 					},

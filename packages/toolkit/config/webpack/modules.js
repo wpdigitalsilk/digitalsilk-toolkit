@@ -80,7 +80,7 @@ module.exports = ({ isProduction, isPackage, defaultTargets, projectConfig: { wo
 						},
 					],
 				],
-		  }
+			}
 		: {};
 
 	return {

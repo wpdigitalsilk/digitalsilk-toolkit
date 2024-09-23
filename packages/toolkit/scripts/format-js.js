@@ -45,7 +45,7 @@ const defaultIgnoreArgs = !hasIgnoredFiles ? ['--ignore-path', fromConfigRoot('.
 const result = spawn(
 	resolveBin('eslint'),
 	['--fix', ...defaultConfigArgs, ...defaultIgnoreArgs, ...args, ...defaultFilesArgs],
-	{ stdio: 'inherit' }
+	{ stdio: 'inherit' },
 );
 
 process.exit(result.status);

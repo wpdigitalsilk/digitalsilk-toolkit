@@ -38,7 +38,7 @@ const runWebpack = () => {
 			},
 			(err, stats) => {
 				displayWebpackStats(err, stats);
-			}
+			},
 		);
 	}
 };
