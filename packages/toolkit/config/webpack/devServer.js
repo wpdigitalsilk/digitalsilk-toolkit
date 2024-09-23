@@ -36,13 +36,12 @@ module.exports = ({ isPackage, projectConfig: { devServer, devURL, hot, devServe
 				},
 			},
 			port: Number(devServerPort),
-			proxy: {
-				'/dist': {
-					pathRewrite: {
-						'^/dist': '',
-					},
+			proxy: [
+				{
+					context: ['/dist'],
+					pathRewrite: { '^/dist': '' },
 				},
-			},
+			],
 		};
 	}
 

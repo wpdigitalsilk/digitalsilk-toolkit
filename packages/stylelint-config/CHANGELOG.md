@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.4.0
+
+### Minor Changes
+
+-   update dev server
+
 ## 1.3.9
 
 ### Patch Changes
