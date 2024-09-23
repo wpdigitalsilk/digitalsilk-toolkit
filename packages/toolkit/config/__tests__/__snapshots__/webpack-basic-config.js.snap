@@ -64,7 +64,9 @@ exports[`webpack.config.js properly detects user config files in package mode 1`
           {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": {
-              "sassOptions": {},
+              "sassOptions": {
+                "quietDeps": true,
+              },
               "sourceMap": true,
             },
           },
@@ -95,7 +97,9 @@ exports[`webpack.config.js properly detects user config files in package mode 1`
           {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": {
-              "sassOptions": {},
+              "sassOptions": {
+                "quietDeps": true,
+              },
               "sourceMap": true,
             },
           },
@@ -125,7 +129,9 @@ exports[`webpack.config.js properly detects user config files in package mode 1`
           {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": {
-              "sassOptions": {},
+              "sassOptions": {
+                "quietDeps": true,
+              },
               "sourceMap": true,
             },
           },
@@ -252,7 +258,9 @@ exports[`webpack.config.js properly detects user config files in project mode 1`
           {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": {
-              "sassOptions": {},
+              "sassOptions": {
+                "quietDeps": true,
+              },
               "sourceMap": true,
             },
           },
@@ -283,7 +291,9 @@ exports[`webpack.config.js properly detects user config files in project mode 1`
           {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": {
-              "sassOptions": {},
+              "sassOptions": {
+                "quietDeps": true,
+              },
               "sourceMap": true,
             },
           },
@@ -313,7 +323,9 @@ exports[`webpack.config.js properly detects user config files in project mode 1`
           {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": {
-              "sassOptions": {},
+              "sassOptions": {
+                "quietDeps": true,
+              },
               "sourceMap": true,
             },
           },
@@ -471,7 +483,9 @@ exports[`webpack.config.js returns proper configs for package config 1`] = `
           {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": {
-              "sassOptions": {},
+              "sassOptions": {
+                "quietDeps": true,
+              },
               "sourceMap": true,
             },
           },
@@ -504,7 +518,9 @@ exports[`webpack.config.js returns proper configs for package config 1`] = `
           {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": {
-              "sassOptions": {},
+              "sassOptions": {
+                "quietDeps": true,
+              },
               "sourceMap": true,
             },
           },
@@ -536,7 +552,9 @@ exports[`webpack.config.js returns proper configs for package config 1`] = `
           {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": {
-              "sassOptions": {},
+              "sassOptions": {
+                "quietDeps": true,
+              },
               "sourceMap": true,
             },
           },
@@ -686,7 +704,9 @@ exports[`webpack.config.js returns proper configs for package config with common
           {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": {
-              "sassOptions": {},
+              "sassOptions": {
+                "quietDeps": true,
+              },
               "sourceMap": true,
             },
           },
@@ -719,7 +739,9 @@ exports[`webpack.config.js returns proper configs for package config with common
           {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": {
-              "sassOptions": {},
+              "sassOptions": {
+                "quietDeps": true,
+              },
               "sourceMap": true,
             },
           },
@@ -751,7 +773,9 @@ exports[`webpack.config.js returns proper configs for package config with common
           {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": {
-              "sassOptions": {},
+              "sassOptions": {
+                "quietDeps": true,
+              },
               "sourceMap": true,
             },
           },
@@ -902,7 +926,9 @@ exports[`webpack.config.js returns proper configs for package config with peer d
           {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": {
-              "sassOptions": {},
+              "sassOptions": {
+                "quietDeps": true,
+              },
               "sourceMap": true,
             },
           },
@@ -935,7 +961,9 @@ exports[`webpack.config.js returns proper configs for package config with peer d
           {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": {
-              "sassOptions": {},
+              "sassOptions": {
+                "quietDeps": true,
+              },
               "sourceMap": true,
             },
           },
@@ -967,7 +995,9 @@ exports[`webpack.config.js returns proper configs for package config with peer d
           {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": {
-              "sassOptions": {},
+              "sassOptions": {
+                "quietDeps": true,
+              },
               "sourceMap": true,
             },
           },
@@ -1116,7 +1146,9 @@ exports[`webpack.config.js returns proper configs for project configs 1`] = `
           {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": {
-              "sassOptions": {},
+              "sassOptions": {
+                "quietDeps": true,
+              },
               "sourceMap": true,
             },
           },
@@ -1149,7 +1181,9 @@ exports[`webpack.config.js returns proper configs for project configs 1`] = `
           {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": {
-              "sassOptions": {},
+              "sassOptions": {
+                "quietDeps": true,
+              },
               "sourceMap": true,
             },
           },
@@ -1181,7 +1215,9 @@ exports[`webpack.config.js returns proper configs for project configs 1`] = `
           {
             "loader": "/node_modules/sass-loader/dist/cjs.js",
             "options": {
-              "sassOptions": {},
+              "sassOptions": {
+                "quietDeps": true,
+              },
               "sourceMap": true,
             },
           },
