@@ -84,6 +84,13 @@ exports[`webpack.config.js includes react-webpack-fast-refresh with the --hot op
               "postcssOptions": {},
             },
           },
+          {
+            "loader": "/node_modules/sass-loader/dist/cjs.js",
+            "options": {
+              "sassOptions": {},
+              "sourceMap": true,
+            },
+          },
         ],
       },
       {

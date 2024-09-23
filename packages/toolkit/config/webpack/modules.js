@@ -112,7 +112,7 @@ module.exports = ({ isProduction, isPackage, defaultTargets, projectConfig: { wo
 						url: isPackage,
 					},
 					postcss: true,
-					sass: false,
+					sass: true,
 				}),
 				exclude: [/\.module\.css$/],
 			},

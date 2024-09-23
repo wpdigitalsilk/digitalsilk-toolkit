@@ -1,4 +1,3 @@
-@import "./import";
 .test {
 	color: red;
 	&__inner {
