@@ -1,0 +1,131 @@
+/* Media Components */
+
+.ds-media {
+	position: relative;
+	overflow: hidden;
+	&.is-background {
+		.ds-media__image {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	.video-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transition: all 0.2s;
+		outline: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+		font-weight: 500;
+		background-color: rgba(0, 0, 0, 0.5);
+		backdrop-filter: blur(3px);
+		cursor: pointer;
+		.editor-styles-wrapper & {
+			cursor: default;
+		}
+		.video-title {
+			font-size: 24px;
+			font-weight: 500;
+			span {
+				display: block;
+			}
+		}
+		.video-cta {
+			font-weight: 500;
+			text-transform: uppercase;
+		}
+		.video-description {
+			font-size: 16px;
+			font-weight: 400;
+			text-transform: uppercase;
+			span {
+				display: block;
+			}
+		}
+		.play-inline-video {
+			border: none;
+			background: transparent;
+			margin: 0;
+			display: block;
+			transition: all 0.3s ease-in;
+			border-radius: 0;
+			padding: 0;
+			color: #fff;
+			svg {
+				vertical-align: top;
+				pointer-events: none;
+				max-width: 100%;
+				height: 100%;
+			}
+			&:focus {
+				outline: 0;
+			}
+			@media (--bp-medium-minus) {
+				max-width: 70px;
+			}
+		}
+	}
+	&.video-playing {
+		.video-overlay {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+	&:not(.video-playing):hover {
+		.ds-media__video {
+			transform: scale(1.1);
+		}
+		.play-inline-video {
+			transform: scale(1.1);
+		}
+	}
+}
+
+.ds-media__image {
+	max-width: 100%;
+	&.ds-media-placeholder {
+		stroke: currentColor;
+		width: 100%;
+		position: relative;
+		background-color: #979797;
+		padding: 0;
+		&::before {
+			display: none;
+		}
+		svg {
+			stroke: #fff;
+			height: 100%;
+			opacity: 0.5;
+			width: 100%;
+			vertical-align: top;
+		}
+		.components-placeholder__illustration {
+			position: static;
+			transform: none;
+		}
+	}
+}
+
+.ds-media__video {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-color: #d2d4df;
+	transition: all ease-in 0.3s;
+	video,
+	iframe {
+		object-fit: cover;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+}

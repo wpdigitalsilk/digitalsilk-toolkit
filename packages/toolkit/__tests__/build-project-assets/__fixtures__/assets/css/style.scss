@@ -1,0 +1,23 @@
+/**
+ * DS_Theme
+ * https://project-website.tld
+ *
+ */
+
+/* Global - global pieces like media queries, mixins and placholders */
+
+@import "global/index";
+
+/* Base - base styles such as fonts, typography, and wordpress overrides */
+
+@import "base/index";
+
+/* Layout - styles specific to layout */
+
+@import "layout/index";
+
+/* Templates */
+
+/* Components */
+
+@import "components/index";
