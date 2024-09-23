@@ -85,6 +85,13 @@ exports[`webpack.config.js adds devServer config when passing the --dev-server f
               },
             },
           },
+          {
+            "loader": "/node_modules/sass-loader/dist/cjs.js",
+            "options": {
+              "sassOptions": {},
+              "sourceMap": true,
+            },
+          },
         ],
       },
       {
@@ -269,6 +276,13 @@ exports[`webpack.config.js allows changing browsersync port 1`] = `
             "loader": "/node_modules/postcss-loader/dist/cjs.js",
             "options": {
               "postcssOptions": {},
+            },
+          },
+          {
+            "loader": "/node_modules/sass-loader/dist/cjs.js",
+            "options": {
+              "sassOptions": {},
+              "sourceMap": true,
             },
           },
         ],
@@ -461,6 +475,13 @@ exports[`webpack.config.js includes webpack-bundle-analyzer when using --analyze
               "postcssOptions": {},
             },
           },
+          {
+            "loader": "/node_modules/sass-loader/dist/cjs.js",
+            "options": {
+              "sassOptions": {},
+              "sourceMap": false,
+            },
+          },
         ],
       },
       {
@@ -649,6 +670,13 @@ exports[`webpack.config.js includes webpack-bundle-analyzer when using --analyze
             "loader": "/node_modules/postcss-loader/dist/cjs.js",
             "options": {
               "postcssOptions": {},
+            },
+          },
+          {
+            "loader": "/node_modules/sass-loader/dist/cjs.js",
+            "options": {
+              "sassOptions": {},
+              "sourceMap": true,
             },
           },
         ],
@@ -863,6 +891,13 @@ exports[`webpack.config.js returns proper configs for package config with common
               },
             },
           },
+          {
+            "loader": "/node_modules/sass-loader/dist/cjs.js",
+            "options": {
+              "sassOptions": {},
+              "sourceMap": true,
+            },
+          },
         ],
       },
       {
@@ -1069,6 +1104,13 @@ exports[`webpack.config.js takes the --target option into account 1`] = `
               "postcssOptions": {
                 "config": "/config/postcss.config.js",
               },
+            },
+          },
+          {
+            "loader": "/node_modules/sass-loader/dist/cjs.js",
+            "options": {
+              "sassOptions": {},
+              "sourceMap": true,
             },
           },
         ],

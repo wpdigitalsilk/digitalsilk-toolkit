@@ -7,18 +7,22 @@ module.exports = ({ file, env }) => {
 	const importPluginConfig = {
 		resolve: (id, basedir, importOptions) => {
 			const extensions = ['.css', '.scss'];
-			const fileExtension = path.extname(id);
+			const possibleNames = [id, `_${id}`];
 
-			if (!fileExtension) {
+			let resolvedPath;
+
+			for (const name of possibleNames) {
 				for (const extension of extensions) {
-					const filePath = path.resolve(basedir, id + extension);
+					const filePath = path.resolve(basedir, name + extension);
 					if (fs.existsSync(filePath)) {
-						return filePath;
+						resolvedPath = filePath;
+						break;
 					}
 				}
+				if (resolvedPath) break;
 			}
 
-			return id;
+			return resolvedPath || id;
 		},
 	};
 

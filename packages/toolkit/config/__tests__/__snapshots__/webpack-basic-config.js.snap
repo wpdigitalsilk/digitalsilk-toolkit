@@ -61,6 +61,13 @@ exports[`webpack.config.js properly detects user config files in package mode 1`
               "postcssOptions": {},
             },
           },
+          {
+            "loader": "/node_modules/sass-loader/dist/cjs.js",
+            "options": {
+              "sassOptions": {},
+              "sourceMap": true,
+            },
+          },
         ],
       },
       {
@@ -240,6 +247,13 @@ exports[`webpack.config.js properly detects user config files in project mode 1`
             "loader": "/node_modules/postcss-loader/dist/cjs.js",
             "options": {
               "postcssOptions": {},
+            },
+          },
+          {
+            "loader": "/node_modules/sass-loader/dist/cjs.js",
+            "options": {
+              "sassOptions": {},
+              "sourceMap": true,
             },
           },
         ],
@@ -454,6 +468,13 @@ exports[`webpack.config.js returns proper configs for package config 1`] = `
               },
             },
           },
+          {
+            "loader": "/node_modules/sass-loader/dist/cjs.js",
+            "options": {
+              "sassOptions": {},
+              "sourceMap": true,
+            },
+          },
         ],
       },
       {
@@ -660,6 +681,13 @@ exports[`webpack.config.js returns proper configs for package config with common
               "postcssOptions": {
                 "config": "/config/postcss.config.js",
               },
+            },
+          },
+          {
+            "loader": "/node_modules/sass-loader/dist/cjs.js",
+            "options": {
+              "sassOptions": {},
+              "sourceMap": true,
             },
           },
         ],
@@ -871,6 +899,13 @@ exports[`webpack.config.js returns proper configs for package config with peer d
               },
             },
           },
+          {
+            "loader": "/node_modules/sass-loader/dist/cjs.js",
+            "options": {
+              "sassOptions": {},
+              "sourceMap": true,
+            },
+          },
         ],
       },
       {
@@ -1076,6 +1111,13 @@ exports[`webpack.config.js returns proper configs for project configs 1`] = `
               "postcssOptions": {
                 "config": "/config/postcss.config.js",
               },
+            },
+          },
+          {
+            "loader": "/node_modules/sass-loader/dist/cjs.js",
+            "options": {
+              "sassOptions": {},
+              "sourceMap": true,
             },
           },
         ],

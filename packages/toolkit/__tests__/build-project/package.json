@@ -6,7 +6,10 @@
 			"admin": "./__fixtures__/assets/js/admin.js",
 			"frontend": "./__fixtures__/assets/js/frontend.js",
 			"frontend-css": "./__fixtures__/assets/css/frontend.css",
-			"example-block": "./__fixtures__/gutenberg/blocks/example/index.js"
+			"example-block": "./__fixtures__/gutenberg/blocks/example/index.js",
+			"import-scss": "./__fixtures__/assets/css/import-scss.css",
+			"import-scss-partial": "./__fixtures__/assets/css/import-scss-partial.css",
+			"import-css": "./__fixtures__/assets/css/import-css.css"
 		}
 	}
 }
