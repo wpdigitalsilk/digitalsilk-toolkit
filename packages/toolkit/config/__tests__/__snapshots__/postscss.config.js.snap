@@ -43,7 +43,7 @@ exports[`postcss properly transforms css 1`] = `
 }
 
 .uikit__colors {
-	font-family: \\"Courier New\\", monospace;
+	font-family: "Courier New", monospace;
 	list-style: none;
 	margin: 0;
 	overflow: hidden;
@@ -133,11 +133,11 @@ exports[`postcss properly transforms css 1`] = `
 	display: none;
 }
 
-.uikit__section > .heading > .toggle[aria-expanded=\\"true\\"] .uikit__chevron-up, .uikit__chevron-down {
+.uikit__section > .heading > .toggle[aria-expanded="true"] .uikit__chevron-up, .uikit__chevron-down {
 	display: block;
 }
 
-.uikit__section > .heading > .toggle[aria-expanded=\\"true\\"] .uikit__chevron-down {
+.uikit__section > .heading > .toggle[aria-expanded="true"] .uikit__chevron-down {
 	display: none;
 }
 
@@ -203,18 +203,18 @@ exports[`postcss transforms accordion.css properly 1`] = `
   width: 100%;
 }
 .accordion-header:before {
-    content: \\"+\\";
+    content: "+";
     left: 5px;
     position: absolute;
     top: 8px;
   }
 .accordion-header.is-active:before {
-    content: \\"-\\";
+    content: "-";
   }
 .js .accordion-content {
     display: none;
     visibility: hidden;
-}
+  }
 .js .accordion-content.is-active {
       border-bottom: 1px solid #303030;
       display: block;
@@ -230,9 +230,8 @@ exports[`postcss transforms mixins properly 1`] = `
 
 	position: relative;
 }
-
 img::before {
-		content: \\"\\";
+		content: "";
 		display: block;
 		padding-bottom: calc(1 / 1 * 100%);
 		width: 100%;
@@ -242,29 +241,25 @@ img::before {
 exports[`postcss transforms nesting.css properly 1`] = `
 "a, b {
   color: red;
-}a c, b c, a d, b d {
+}
+a c,b c,a d,b d {
     color: white;
   }"
 `;
 
 exports[`postcss.config.js build a proper postcss config file for non-editor styles: env=development 1`] = `
-Object {
-  "plugins": Object {
-    "@csstools/postcss-global-data": Object {
-      "files": Array [
-        "/Users/stefan/SAJTOVI/digital-silk/digitalsilk-toolkit/packages/toolkit/config/__tests__/__fixtures__/custom-media-queries.mock.css",
-      ],
-    },
+{
+  "plugins": {
     "cssnano": false,
-    "postcss-current-selector": Object {},
-    "postcss-custom-media": Object {},
-    "postcss-extend": Object {},
-    "postcss-import": Object {},
-    "postcss-mixins": Object {},
-    "postcss-nested": Object {},
-    "postcss-nested-ancestors": Object {},
-    "postcss-preset-env": Object {
-      "features": Object {
+    "postcss-current-selector": {},
+    "postcss-custom-media": {},
+    "postcss-extend": {},
+    "postcss-import": {},
+    "postcss-mixins": {},
+    "postcss-nested": {},
+    "postcss-nested-ancestors": {},
+    "postcss-preset-env": {
+      "features": {
         "custom-properties": false,
       },
       "stage": 0,
@@ -274,23 +269,18 @@ Object {
 `;
 
 exports[`postcss.config.js build a proper postcss config file for non-editor styles: env=production 1`] = `
-Object {
-  "plugins": Object {
-    "@csstools/postcss-global-data": Object {
-      "files": Array [
-        "/Users/stefan/SAJTOVI/digital-silk/digitalsilk-toolkit/packages/toolkit/config/__tests__/__fixtures__/custom-media-queries.mock.css",
-      ],
-    },
-    "cssnano": Object {
-      "preset": Array [
+{
+  "plugins": {
+    "cssnano": {
+      "preset": [
         "default",
-        Object {
+        {
           "autoprefixer": true,
-          "calc": Object {
+          "calc": {
             "precision": 8,
           },
           "convertValues": true,
-          "discardComments": Object {
+          "discardComments": {
             "removeAll": true,
           },
           "mergeLonghand": false,
@@ -298,15 +288,15 @@ Object {
         },
       ],
     },
-    "postcss-current-selector": Object {},
-    "postcss-custom-media": Object {},
-    "postcss-extend": Object {},
-    "postcss-import": Object {},
-    "postcss-mixins": Object {},
-    "postcss-nested": Object {},
-    "postcss-nested-ancestors": Object {},
-    "postcss-preset-env": Object {
-      "features": Object {
+    "postcss-current-selector": {},
+    "postcss-custom-media": {},
+    "postcss-extend": {},
+    "postcss-import": {},
+    "postcss-mixins": {},
+    "postcss-nested": {},
+    "postcss-nested-ancestors": {},
+    "postcss-preset-env": {
+      "features": {
         "custom-properties": false,
       },
       "stage": 0,
@@ -316,30 +306,25 @@ Object {
 `;
 
 exports[`postcss.config.js builds a proper postcss config file for editor styles: env=development 1`] = `
-Object {
-  "plugins": Object {
-    "@csstools/postcss-global-data": Object {
-      "files": Array [
-        "/Users/stefan/SAJTOVI/digital-silk/digitalsilk-toolkit/packages/toolkit/config/__tests__/__fixtures__/custom-media-queries.mock.css",
-      ],
-    },
+{
+  "plugins": {
     "cssnano": false,
-    "postcss-current-selector": Object {},
-    "postcss-custom-media": Object {},
-    "postcss-editor-styles": Object {
-      "ignore": Array [
+    "postcss-current-selector": {},
+    "postcss-custom-media": {},
+    "postcss-editor-styles": {
+      "ignore": [
         ":root",
         ".edit-post-visual-editor.editor-styles-wrapper",
         ".wp-toolbar",
       ],
-      "remove": Array [
+      "remove": [
         "html",
         ":disabled",
         "[readonly]",
         "[disabled]",
       ],
       "scopeTo": ".editor-styles-wrapper",
-      "tags": Array [
+      "tags": [
         "button",
         "input",
         "label",
@@ -348,13 +333,13 @@ Object {
         "form",
       ],
     },
-    "postcss-extend": Object {},
-    "postcss-import": Object {},
-    "postcss-mixins": Object {},
-    "postcss-nested": Object {},
-    "postcss-nested-ancestors": Object {},
-    "postcss-preset-env": Object {
-      "features": Object {
+    "postcss-extend": {},
+    "postcss-import": {},
+    "postcss-mixins": {},
+    "postcss-nested": {},
+    "postcss-nested-ancestors": {},
+    "postcss-preset-env": {
+      "features": {
         "custom-properties": false,
       },
       "stage": 0,
@@ -364,23 +349,18 @@ Object {
 `;
 
 exports[`postcss.config.js builds a proper postcss config file for editor styles: env=production 1`] = `
-Object {
-  "plugins": Object {
-    "@csstools/postcss-global-data": Object {
-      "files": Array [
-        "/Users/stefan/SAJTOVI/digital-silk/digitalsilk-toolkit/packages/toolkit/config/__tests__/__fixtures__/custom-media-queries.mock.css",
-      ],
-    },
-    "cssnano": Object {
-      "preset": Array [
+{
+  "plugins": {
+    "cssnano": {
+      "preset": [
         "default",
-        Object {
+        {
           "autoprefixer": true,
-          "calc": Object {
+          "calc": {
             "precision": 8,
           },
           "convertValues": true,
-          "discardComments": Object {
+          "discardComments": {
             "removeAll": true,
           },
           "mergeLonghand": false,
@@ -388,22 +368,22 @@ Object {
         },
       ],
     },
-    "postcss-current-selector": Object {},
-    "postcss-custom-media": Object {},
-    "postcss-editor-styles": Object {
-      "ignore": Array [
+    "postcss-current-selector": {},
+    "postcss-custom-media": {},
+    "postcss-editor-styles": {
+      "ignore": [
         ":root",
         ".edit-post-visual-editor.editor-styles-wrapper",
         ".wp-toolbar",
       ],
-      "remove": Array [
+      "remove": [
         "html",
         ":disabled",
         "[readonly]",
         "[disabled]",
       ],
       "scopeTo": ".editor-styles-wrapper",
-      "tags": Array [
+      "tags": [
         "button",
         "input",
         "label",
@@ -412,13 +392,13 @@ Object {
         "form",
       ],
     },
-    "postcss-extend": Object {},
-    "postcss-import": Object {},
-    "postcss-mixins": Object {},
-    "postcss-nested": Object {},
-    "postcss-nested-ancestors": Object {},
-    "postcss-preset-env": Object {
-      "features": Object {
+    "postcss-extend": {},
+    "postcss-import": {},
+    "postcss-mixins": {},
+    "postcss-nested": {},
+    "postcss-nested-ancestors": {},
+    "postcss-preset-env": {
+      "features": {
         "custom-properties": false,
       },
       "stage": 0,

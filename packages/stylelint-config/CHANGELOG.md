@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.9
+
+### Patch Changes
+
+-   Update toolkit dependencies
+
 ## 1.2.8
 
 ### Patch Changes

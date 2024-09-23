@@ -1,6 +1,6 @@
 {
 	"name": "@digitalsilk/eslint-config",
-	"version": "1.2.8",
+	"version": "1.2.9",
 	"description": "ESLint configuration",
 	"publishConfig": {
 		"access": "public"
@@ -31,7 +31,7 @@
 	"dependencies": {
 		"@babel/core": "^7.25.2",
 		"@babel/eslint-parser": "^7.25.1",
-		"@digitalsilk/babel-preset-default": "^1.2.8",
+		"@digitalsilk/babel-preset-default": "^1.2.9",
 		"@wordpress/eslint-plugin": "^21.1.2",
 		"eslint": "^8.57.1",
 		"eslint-config-airbnb": "^19.0.4",
@@ -44,7 +44,9 @@
 		"eslint-plugin-prettier": "4.2.1",
 		"eslint-plugin-react": "^7.36.1",
 		"eslint-plugin-react-hooks": "^4.6.2",
-		"prettier": "^3.3.3"
+		"prettier": "^3.3.3",
+		"@typescript-eslint/eslint-plugin": "^8.6.0",
+		"@typescript-eslint/parser": "^8.6.0"
 	},
 	"engines": {
 		"node": ">=18"

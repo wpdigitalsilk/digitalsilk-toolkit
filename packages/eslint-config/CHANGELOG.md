@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.9
+
+### Patch Changes
+
+-   Update toolkit dependencies
+-   Updated dependencies
+    -   @digitalsilk/babel-preset-default@1.2.9
+
 ## 1.2.8
 
 ### Patch Changes

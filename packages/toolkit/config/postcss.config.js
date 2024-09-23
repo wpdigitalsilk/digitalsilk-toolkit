@@ -3,9 +3,6 @@ const path = require('path');
 module.exports = ({ file, env }) => {
 	const isTestingEnv = process.env.NODE_ENV === 'test';
 
-	const customMediaQueriesPath = isTestingEnv
-		? path.resolve(process.cwd(), 'config/__tests__/__fixtures__/custom-media-queries.mock.css')
-		: path.resolve(process.cwd(), 'assets/css/frontend/global/custom-media-queries.css');
 	const config = {
 		plugins: {
 			'postcss-import': {},
@@ -17,15 +14,18 @@ module.exports = ({ file, env }) => {
 					'custom-properties': false,
 				},
 			},
-			'@csstools/postcss-global-data': {
-				files: [customMediaQueriesPath],
-			},
 			'postcss-custom-media': {},
 			'postcss-nested-ancestors': {},
 			'postcss-nested': {},
 			'postcss-current-selector': {},
 		},
 	};
+
+	if (!isTestingEnv) {
+		config.plugins['@csstools/postcss-global-data'] = {
+			files: [path.resolve(process.cwd(), 'assets/css/frontend/global/custom-media-queries.css')],
+		};
+	}
 
 	// Only load postcss-editor-styles plugin when we're processing the editor-style.css file.
 	if (path.basename(file) === 'editor-style.css') {
@@ -55,7 +55,7 @@ module.exports = ({ file, env }) => {
 							zindex: false,
 						},
 					],
-			  }
+				}
 			: false;
 
 	return config;
