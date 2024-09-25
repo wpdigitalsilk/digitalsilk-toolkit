@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.4.6
+
+### Patch Changes
+
+-   revert
+-   Updated dependencies
+    -   @digitalsilk/eslint-config@1.4.6
+
 ## 1.4.5
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.4.6
+
+### Patch Changes
+
+-   revert
+-   Updated dependencies
+    -   @digitalsilk/babel-preset-default@1.4.6
+    -   @digitalsilk/stylelint-config@1.4.6
+    -   @digitalsilk/eslint-config@1.4.6
+
 ## 1.4.5
 
 ### Patch Changes
