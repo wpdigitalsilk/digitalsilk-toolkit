@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.4.3
+
+### Patch Changes
+
+-   Add create block
+-   Updated dependencies
+    -   @digitalsilk/babel-preset-default@1.4.3
+    -   @digitalsilk/stylelint-config@1.4.3
+    -   @digitalsilk/eslint-config@1.4.3
+
 ## 1.4.2
 
 ### Patch Changes

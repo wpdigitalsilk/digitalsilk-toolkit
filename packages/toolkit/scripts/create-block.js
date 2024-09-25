@@ -23,6 +23,6 @@ const hasIgnoredFiles = hasArgInCLI('--ignore-path') || hasProjectFile('.styleli
 
 const defaultIgnoreArgs = !hasIgnoredFiles ? ['--ignore-path', fromConfigRoot('.stylelintignore')] : [];
 
-const result = spawn(resolveBin('stylelint'), [...defaultConfigArgs, ...defaultIgnoreArgs, ...args, ...defaultFilesArgs], { stdio: 'inherit' });
+const result = spawn(resolveBin('@wordpress/create-block'), [...defaultConfigArgs, ...defaultIgnoreArgs, ...args, ...defaultFilesArgs], { stdio: 'inherit' });
 
 process.exit(result.status);
