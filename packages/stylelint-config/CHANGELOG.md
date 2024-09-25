@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.4.2
+
+### Patch Changes
+
+-   Update postcss
+
 ## 1.4.1
 
 ### Patch Changes

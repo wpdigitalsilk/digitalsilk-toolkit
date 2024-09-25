@@ -13,20 +13,18 @@ exports[`webpack.config.js includes react-webpack-fast-refresh with the --hot op
         "errors": true,
         "warnings": false,
       },
+      "reconnect": 5,
     },
     "devMiddleware": {
       "writeToDisk": true,
     },
-    "hot": true,
-    "port": 8000,
-    "proxy": {
-      "/dist": {
-        "pathRewrite": {
-          "^/dist": "",
-        },
-      },
+    "headers": {
+      "Access-Control-Allow-Origin": "*",
+      "disableHostCheck": true,
     },
-    "static": "/dist",
+    "hot": "only",
+    "liveReload": false,
+    "port": 8000,
   },
   "devtool": "source-map",
   "entry": () => getEntryPoints(config),
@@ -91,6 +89,9 @@ exports[`webpack.config.js includes react-webpack-fast-refresh with the --hot op
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -127,6 +128,9 @@ exports[`webpack.config.js includes react-webpack-fast-refresh with the --hot op
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -162,6 +166,9 @@ exports[`webpack.config.js includes react-webpack-fast-refresh with the --hot op
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -192,7 +199,7 @@ exports[`webpack.config.js includes react-webpack-fast-refresh with the --hot op
       return isBlockAsset ? filenames.block : filenames.js;
     },
     "path": "/dist",
-    "publicPath": "/",
+    "publicPath": "/wp-content/themes/digitalsilk-theme/dist/",
   },
   "performance": {
     "hints": "warning",
@@ -200,7 +207,7 @@ exports[`webpack.config.js includes react-webpack-fast-refresh with the --hot op
     "maxEntrypointSize": 40960000,
   },
   "plugins": [
-    HtmlWebpackPlugin: {"template":"public/index.html","templateContent":false,"filename":"index.html","publicPath":"auto","hash":false,"inject":"head","scriptLoading":"defer","compile":true,"favicon":false,"minify":"auto","cache":true,"showErrors":true,"chunks":"all","excludeChunks":[],"chunksSortMode":"auto","meta":{},"base":false,"title":"Webpack App","xhtml":false},
+    HtmlWebpackPlugin: {"template":"dist/index.html","templateContent":false,"filename":"index.html","publicPath":"auto","hash":false,"inject":"head","scriptLoading":"defer","compile":true,"favicon":false,"minify":"auto","cache":true,"showErrors":true,"chunks":"all","excludeChunks":[],"chunksSortMode":"auto","meta":{},"base":false,"title":"Webpack App","xhtml":false},
     ESLintWebpackPlugin: {"cache":true,"cacheLocation":"node_modules/.cache/eslint-webpack-plugin/.eslintcache","extensions":"js","emitError":true,"emitWarning":true,"failOnError":false,"resourceQueryExclude":[],"fix":false,"lintDirtyModulesOnly":true},
     MiniCssExtractPlugin: {"ignoreOrder":false,"runtime":true,"chunkFilename":"[id].css"},
     CopyPlugin: {},

@@ -9,19 +9,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const { resolve } = require('path');
+const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 const RemoveEmptyScriptsPlugin = require('./plugins/remove-empty-scripts');
 const CleanExtractedDeps = require('./plugins/clean-extracted-deps');
 const DSToolkitTscPlugin = require('./plugins/tsc');
 const NoBrowserSyncPlugin = require('./plugins/no-browser-sync');
-const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 
-const {
-	hasStylelintConfig,
-	fromConfigRoot,
-	hasProjectFile,
-	getArgFromCLI,
-	maybeInsertStyleVersionHash,
-} = require('../../utils');
+const { hasStylelintConfig, fromConfigRoot, hasProjectFile, getArgFromCLI, maybeInsertStyleVersionHash } = require('../../utils');
 const { isPackageInstalled } = require('../../utils/package');
 
 const removeDistFolder = (file) => {
@@ -32,23 +26,7 @@ const removeDistFolder = (file) => {
 // This ensures that the same reporter is used everywhere
 const webpackbarArguments = process.env.JEST_WORKER_ID !== undefined ? { reporters: ['basic'] } : undefined;
 
-module.exports = ({
-	isPackage,
-	isProduction,
-	projectConfig: {
-		devServer,
-		filenames,
-		devURL,
-		devServerPort,
-		paths,
-		wpDependencyExternals,
-		analyze,
-		hot,
-		useBlockAssets,
-	},
-	packageConfig: { style },
-	buildFiles,
-}) => {
+module.exports = ({ isPackage, isProduction, projectConfig: { devServer, filenames, devURL, devServerPort, paths, wpDependencyExternals, analyze, hot, useBlockAssets }, packageConfig: { style }, buildFiles }) => {
 	const hasReactFastRefresh = hot && !isProduction;
 
 	const hasBrowserSync = isPackageInstalled('browser-sync-webpack-plugin') && isPackageInstalled('browser-sync');
@@ -87,8 +65,8 @@ module.exports = ({
 	return [
 		devServer &&
 			new HtmlWebpackPlugin({
-				...(hasProjectFile('public/index.html') && {
-					template: 'public/index.html',
+				...(hasProjectFile('dist/index.html') && {
+					template: 'dist/index.html',
 				}),
 			}),
 		new ESLintPlugin({
@@ -136,8 +114,7 @@ module.exports = ({
 					if (useBlockAssets) {
 						isBlockAsset =
 							// match windows and posix paths
-							buildFiles[options.chunk.name].match(/\/blocks?\//) ||
-							buildFiles[options.chunk.name].match(/\\blocks?\\/);
+							buildFiles[options.chunk.name].match(/\/blocks?\//) || buildFiles[options.chunk.name].match(/\\blocks?\\/);
 					} else {
 						isBlockAsset = options.chunk.name.match(/-block$/);
 					}
@@ -195,7 +172,7 @@ module.exports = ({
 		}),
 
 		// SVG Sprite
-		new SVGSpritemapPlugin(paths.iconsDir + '*.svg', {
+		new SVGSpritemapPlugin(`${paths.iconsDir}*.svg`, {
 			output: {
 				filename: 'svg-sprite.svg',
 				svg: {

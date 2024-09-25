@@ -50,7 +50,7 @@ function shouldExclude(input, include) {
 		}
 	});
 
-	// don't exclude if should include
+	// don't exclude if it should include
 	if (shouldInclude) {
 		return false;
 	}
@@ -80,7 +80,7 @@ module.exports = ({ isProduction, isPackage, defaultTargets, projectConfig: { wo
 						},
 					],
 				],
-			}
+		  }
 		: {};
 
 	return {

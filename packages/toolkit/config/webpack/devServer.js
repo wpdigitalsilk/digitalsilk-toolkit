@@ -1,5 +1,3 @@
-const { resolve, join, path } = require('path');
-
 module.exports = ({ isPackage, projectConfig: { devServer, devURL, hot, devServerPort } }) => {
 	if (!devServer && !hot) {
 		return undefined;
@@ -22,26 +20,27 @@ module.exports = ({ isPackage, projectConfig: { devServer, devURL, hot, devServe
 		}
 
 		return {
-			contentBase: path.join(__dirname, 'dist'), // Base directory for the dev server
+			// static: {
+			// 	directory: resolve(process.cwd(), join('dist')), // Base directory for the dev server
+			// },
 			devMiddleware: {
 				writeToDisk: true,
 			},
-			// static: resolve(process.cwd(), join('dist')),
 			allowedHosts,
-			hot: true,
+			hot: 'only',
+			liveReload: false,
+			headers: {
+				disableHostCheck: true,
+				'Access-Control-Allow-Origin': '*',
+			},
 			client: {
 				overlay: {
 					errors: true,
 					warnings: false,
 				},
+				reconnect: 5,
 			},
 			port: Number(devServerPort),
-			proxy: [
-				{
-					context: ['/dist'],
-					pathRewrite: { '^/dist': '' },
-				},
-			],
 		};
 	}
 

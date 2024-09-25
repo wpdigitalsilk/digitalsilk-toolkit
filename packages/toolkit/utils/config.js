@@ -9,58 +9,21 @@ const { fromConfigRoot, fromProjectRoot, hasProjectFile } = require('./file');
 const { hasPackageProp, getPackage } = require('./package');
 
 // See https://babeljs.io/docs/en/config-files#configuration-file-types
-const hasBabelConfig = () =>
-	hasProjectFile('.babelrc.js') ||
-	hasProjectFile('.babelrc.json') ||
-	hasProjectFile('babel.config.js') ||
-	hasProjectFile('babel.config.json') ||
-	hasProjectFile('.babelrc') ||
-	hasPackageProp('babel');
+const hasBabelConfig = () => hasProjectFile('.babelrc.js') || hasProjectFile('.babelrc.json') || hasProjectFile('babel.config.js') || hasProjectFile('babel.config.json') || hasProjectFile('.babelrc') || hasPackageProp('babel');
 
 // See https://prettier.io/docs/en/configuration.html.
-const hasPrettierConfig = () =>
-	hasProjectFile('.prettierrc.js') ||
-	hasProjectFile('.prettierrc.json') ||
-	hasProjectFile('.prettierrc.toml') ||
-	hasProjectFile('.prettierrc.yaml') ||
-	hasProjectFile('.prettierrc.yml') ||
-	hasProjectFile('prettier.config.js') ||
-	hasProjectFile('.prettierrc') ||
-	hasPackageProp('prettier');
+const hasPrettierConfig = () => hasProjectFile('.prettierrc.js') || hasProjectFile('.prettierrc.json') || hasProjectFile('.prettierrc.toml') || hasProjectFile('.prettierrc.yaml') || hasProjectFile('.prettierrc.yml') || hasProjectFile('prettier.config.js') || hasProjectFile('.prettierrc') || hasPackageProp('prettier');
 
-const hasWebpackConfig = () =>
-	hasArgInCLI('--config') || hasProjectFile('webpack.config.js') || hasProjectFile('webpack.config.babel.js');
+const hasWebpackConfig = () => hasArgInCLI('--config') || hasProjectFile('webpack.config.js') || hasProjectFile('webpack.config.babel.js');
 
 // See https://github.com/michael-ciniawsky/postcss-load-config#usage (used by postcss-loader).
-const hasPostCSSConfig = () =>
-	hasProjectFile('postcss.config.js') ||
-	hasProjectFile('.postcssrc') ||
-	hasProjectFile('.postcssrc.json') ||
-	hasProjectFile('.postcssrc.yaml') ||
-	hasProjectFile('.postcssrc.yml') ||
-	hasProjectFile('.postcssrc.js') ||
-	hasPackageProp('postcss');
+const hasPostCSSConfig = () => hasProjectFile('postcss.config.js') || hasProjectFile('.postcssrc') || hasProjectFile('.postcssrc.json') || hasProjectFile('.postcssrc.yaml') || hasProjectFile('.postcssrc.yml') || hasProjectFile('.postcssrc.js') || hasPackageProp('postcss');
 
-const hasStylelintConfig = () =>
-	hasProjectFile('.stylelintrc.js') ||
-	hasProjectFile('.stylelintrc.json') ||
-	hasProjectFile('.stylelintrc.yaml') ||
-	hasProjectFile('.stylelintrc.yml') ||
-	hasProjectFile('stylelint.config.js') ||
-	hasProjectFile('.stylelintrc') ||
-	hasPackageProp('stylelint');
+const hasStylelintConfig = () => hasProjectFile('.stylelintrc.js') || hasProjectFile('.stylelintrc.json') || hasProjectFile('.stylelintrc.yaml') || hasProjectFile('.stylelintrc.yml') || hasProjectFile('stylelint.config.js') || hasProjectFile('.stylelintrc') || hasPackageProp('stylelint');
 
-const hasEslintConfig = () =>
-	hasProjectFile('.eslintrc.js') ||
-	hasProjectFile('.eslintrc.json') ||
-	hasProjectFile('.eslintrc.yaml') ||
-	hasProjectFile('.eslintrc.yml') ||
-	hasProjectFile('eslintrc.config.js') ||
-	hasProjectFile('.eslintrc') ||
-	hasPackageProp('eslintConfig');
+const hasEslintConfig = () => hasProjectFile('.eslintrc.js') || hasProjectFile('.eslintrc.json') || hasProjectFile('.eslintrc.yaml') || hasProjectFile('.eslintrc.yml') || hasProjectFile('eslintrc.config.js') || hasProjectFile('.eslintrc') || hasPackageProp('eslintConfig');
 
-const hasJestConfig = () =>
-	hasProjectFile('jest.config.js') || hasProjectFile('jest.config.json') || hasPackageProp('jest');
+const hasJestConfig = () => hasProjectFile('jest.config.js') || hasProjectFile('jest.config.json') || hasPackageProp('jest');
 
 const hasTsConfig = () => hasProjectFile('tsconfig.json');
 
@@ -117,8 +80,9 @@ const getDefaultConfig = () => {
 		// true by default (if DS_NO_EXTERNALS is not set)
 		// if DS_NO_EXTERNALS is truthy then dependencyExternals is false
 		wpDependencyExternals: typeof process.env.DS_NO_EXTERNALS === 'undefined' || !process.env.DS_NO_EXTERNALS,
-		publicPath: process.env.ASSET_PATH || '/',
+		publicPath: process.env.ASSET_PATH || '/wp-content/themes/digitalsilk-theme/dist/',
 		useBlockAssets: true,
+		globalCss: ['assets/css/frontend/global/custom-media-queries.css'],
 		include,
 	};
 };
@@ -200,9 +164,7 @@ const getDSScriptsPackageBuildConfig = () => {
 	const packageJson = getPackage();
 	const config = getDSScriptsConfig();
 	const { name = 'default-package', style } = packageJson;
-	const packageType = normalizePackageType(
-		getArgFromCLI('-f') || getArgFromCLI('--format') || config.packageType || 'all',
-	);
+	const packageType = normalizePackageType(getArgFromCLI('-f') || getArgFromCLI('--format') || config.packageType || 'all');
 	const source = getArgFromCLI('-i') || getArgFromCLI('--input') || packageJson.source;
 	const main = getArgFromCLI('-o') || getArgFromCLI('--output') || packageJson.main;
 	const exports = packageJson.exports || {};
