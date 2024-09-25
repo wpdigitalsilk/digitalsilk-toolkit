@@ -1,6 +1,6 @@
 {
 	"name": "@digitalsilk/stylelint-config",
-	"version": "1.4.4",
+	"version": "1.4.5",
 	"description": "Digital Silk stylelint config for WP projects",
 	"main": "index.js",
 	"homepage": "https://github.com/wpdigitalsilk/digitalsilk-toolkit/blob/master/packages/stylelint-config/README.md",
