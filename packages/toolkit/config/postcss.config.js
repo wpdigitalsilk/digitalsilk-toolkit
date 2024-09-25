@@ -1,11 +1,15 @@
 const fs = require('fs');
 const path = require('path');
+const { getDSScriptsConfig } = require('../utils');
+
+const projectConfig = getDSScriptsConfig();
+const { globalCss = [] } = projectConfig;
 
 module.exports = ({ file, env }) => {
 	const isTestingEnv = process.env.NODE_ENV === 'test';
 
 	const importPluginConfig = {
-		resolve: (id, basedir, importOptions) => {
+		resolve: (id, basedir) => {
 			const extensions = ['.css', '.scss'];
 			const possibleNames = [id, `_${id}`];
 
@@ -30,24 +34,26 @@ module.exports = ({ file, env }) => {
 		plugins: {
 			'postcss-import': importPluginConfig,
 			'postcss-mixins': {},
-			// 'postcss-extend': {},
 			'postcss-preset-env': {
 				stage: 0,
 				features: {
 					'custom-properties': false,
 				},
 			},
-			'postcss-custom-media': {},
 			'postcss-nested-ancestors': {},
 			'postcss-nested': {},
-			// 'postcss-current-selector': {},
 		},
 	};
 
 	if (!isTestingEnv) {
-		config.plugins['@csstools/postcss-global-data'] = {
-			files: [path.resolve(process.cwd(), 'assets/css/frontend/global/custom-media-queries.css')],
-		};
+		const includedFiles = globalCss.map((item) => path.resolve(process.cwd(), item));
+
+		if (includedFiles && includedFiles.length > 0) {
+			config.plugins['@csstools/postcss-global-data'] = {
+				files: includedFiles,
+			};
+			config.plugins['postcss-custom-media'] = {};
+		}
 	}
 
 	// Only load postcss-editor-styles plugin when we're processing the editor-style.css file.
@@ -78,7 +84,7 @@ module.exports = ({ file, env }) => {
 							zindex: false,
 						},
 					],
-				}
+			  }
 			: false;
 
 	return config;

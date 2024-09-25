@@ -68,6 +68,9 @@ exports[`webpack.config.js properly detects user config files in package mode 1`
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -104,6 +107,9 @@ exports[`webpack.config.js properly detects user config files in package mode 1`
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -139,6 +145,9 @@ exports[`webpack.config.js properly detects user config files in package mode 1`
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -271,6 +280,9 @@ exports[`webpack.config.js properly detects user config files in project mode 1`
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -307,6 +319,9 @@ exports[`webpack.config.js properly detects user config files in project mode 1`
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -342,6 +357,9 @@ exports[`webpack.config.js properly detects user config files in project mode 1`
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -372,7 +390,7 @@ exports[`webpack.config.js properly detects user config files in project mode 1`
       return isBlockAsset ? filenames.block : filenames.js;
     },
     "path": "/dist",
-    "publicPath": "/",
+    "publicPath": "/wp-content/themes/digitalsilk-theme/dist/",
   },
   "performance": {
     "hints": "warning",
@@ -505,6 +523,9 @@ exports[`webpack.config.js returns proper configs for package config 1`] = `
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -543,6 +564,9 @@ exports[`webpack.config.js returns proper configs for package config 1`] = `
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -580,6 +604,9 @@ exports[`webpack.config.js returns proper configs for package config 1`] = `
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -735,6 +762,9 @@ exports[`webpack.config.js returns proper configs for package config with common
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -773,6 +803,9 @@ exports[`webpack.config.js returns proper configs for package config with common
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -810,6 +843,9 @@ exports[`webpack.config.js returns proper configs for package config with common
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -966,6 +1002,9 @@ exports[`webpack.config.js returns proper configs for package config with peer d
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -1004,6 +1043,9 @@ exports[`webpack.config.js returns proper configs for package config with peer d
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -1041,6 +1083,9 @@ exports[`webpack.config.js returns proper configs for package config with peer d
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -1195,6 +1240,9 @@ exports[`webpack.config.js returns proper configs for project configs 1`] = `
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -1233,6 +1281,9 @@ exports[`webpack.config.js returns proper configs for project configs 1`] = `
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -1270,6 +1321,9 @@ exports[`webpack.config.js returns proper configs for project configs 1`] = `
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -1300,7 +1354,7 @@ exports[`webpack.config.js returns proper configs for project configs 1`] = `
       return isBlockAsset ? filenames.block : filenames.js;
     },
     "path": "/dist",
-    "publicPath": "/",
+    "publicPath": "/wp-content/themes/digitalsilk-theme/dist/",
   },
   "performance": {
     "hints": "warning",

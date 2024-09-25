@@ -253,7 +253,6 @@ exports[`postcss.config.js build a proper postcss config file for non-editor sty
 {
   "plugins": {
     "cssnano": false,
-    "postcss-custom-media": {},
     "postcss-import": {
       "resolve": [Function],
     },
@@ -290,7 +289,6 @@ exports[`postcss.config.js build a proper postcss config file for non-editor sty
         },
       ],
     },
-    "postcss-custom-media": {},
     "postcss-import": {
       "resolve": [Function],
     },
@@ -311,7 +309,6 @@ exports[`postcss.config.js builds a proper postcss config file for editor styles
 {
   "plugins": {
     "cssnano": false,
-    "postcss-custom-media": {},
     "postcss-editor-styles": {
       "ignore": [
         ":root",
@@ -370,7 +367,6 @@ exports[`postcss.config.js builds a proper postcss config file for editor styles
         },
       ],
     },
-    "postcss-custom-media": {},
     "postcss-editor-styles": {
       "ignore": [
         ":root",

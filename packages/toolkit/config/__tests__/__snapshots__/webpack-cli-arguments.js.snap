@@ -92,6 +92,9 @@ exports[`webpack.config.js adds devServer config when passing the --dev-server f
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -130,6 +133,9 @@ exports[`webpack.config.js adds devServer config when passing the --dev-server f
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -167,6 +173,9 @@ exports[`webpack.config.js adds devServer config when passing the --dev-server f
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -199,7 +208,7 @@ exports[`webpack.config.js adds devServer config when passing the --dev-server f
     "maxEntrypointSize": 40960000,
   },
   "plugins": [
-    HtmlWebpackPlugin: {"template":"public/index.html","templateContent":false,"filename":"index.html","publicPath":"auto","hash":false,"inject":"head","scriptLoading":"defer","compile":true,"favicon":false,"minify":"auto","cache":true,"showErrors":true,"chunks":"all","excludeChunks":[],"chunksSortMode":"auto","meta":{},"base":false,"title":"Webpack App","xhtml":false},
+    HtmlWebpackPlugin: {"template":"auto","templateContent":false,"filename":"index.html","publicPath":"auto","hash":false,"inject":"head","scriptLoading":"defer","compile":true,"favicon":false,"minify":"auto","cache":true,"showErrors":true,"chunks":"all","excludeChunks":[],"chunksSortMode":"auto","meta":{},"base":false,"title":"Webpack App","xhtml":false},
     ESLintWebpackPlugin: {"cache":true,"cacheLocation":"node_modules/.cache/eslint-webpack-plugin/.eslintcache","extensions":"js","emitError":true,"emitWarning":true,"failOnError":false,"resourceQueryExclude":[],"fix":false,"lintDirtyModulesOnly":true},
     MiniCssExtractPlugin: {"ignoreOrder":false,"runtime":true,"chunkFilename":"[id].css"},
     StylelintWebpackPlugin: {"cache":true,"cacheLocation":"node_modules/.cache/stylelint-webpack-plugin/.stylelintcache","extensions":["css","scss","sass"],"emitError":true,"emitWarning":true,"failOnError":false,"context":"/assets","files":"**/*.(s(c|a)ss|css)","allowEmptyInput":true,"lintDirtyModulesOnly":true,"configFile":"/config/stylelint.config.js"},
@@ -300,6 +309,9 @@ exports[`webpack.config.js allows changing browsersync port 1`] = `
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -336,6 +348,9 @@ exports[`webpack.config.js allows changing browsersync port 1`] = `
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -371,6 +386,9 @@ exports[`webpack.config.js allows changing browsersync port 1`] = `
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -401,7 +419,7 @@ exports[`webpack.config.js allows changing browsersync port 1`] = `
       return isBlockAsset ? filenames.block : filenames.js;
     },
     "path": "/dist",
-    "publicPath": "/",
+    "publicPath": "/wp-content/themes/digitalsilk-theme/dist/",
   },
   "performance": {
     "hints": "warning",
@@ -512,6 +530,9 @@ exports[`webpack.config.js includes webpack-bundle-analyzer when using --analyze
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": false,
@@ -548,6 +569,9 @@ exports[`webpack.config.js includes webpack-bundle-analyzer when using --analyze
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": false,
@@ -583,6 +607,9 @@ exports[`webpack.config.js includes webpack-bundle-analyzer when using --analyze
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": false,
@@ -613,12 +640,12 @@ exports[`webpack.config.js includes webpack-bundle-analyzer when using --analyze
       return isBlockAsset ? filenames.block : filenames.js;
     },
     "path": "/dist",
-    "publicPath": "/",
+    "publicPath": "/wp-content/themes/digitalsilk-theme/dist/",
   },
   "performance": {
     "hints": "warning",
-    "maxAssetSize": 102400,
-    "maxEntrypointSize": 409600,
+    "maxAssetSize": 256000,
+    "maxEntrypointSize": 512000,
   },
   "plugins": [
     ESLintWebpackPlugin: {"cache":true,"cacheLocation":"node_modules/.cache/eslint-webpack-plugin/.eslintcache","extensions":"js","emitError":true,"emitWarning":true,"failOnError":false,"resourceQueryExclude":[],"fix":false,"lintDirtyModulesOnly":true},
@@ -724,6 +751,9 @@ exports[`webpack.config.js includes webpack-bundle-analyzer when using --analyze
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -760,6 +790,9 @@ exports[`webpack.config.js includes webpack-bundle-analyzer when using --analyze
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -795,6 +828,9 @@ exports[`webpack.config.js includes webpack-bundle-analyzer when using --analyze
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -825,7 +861,7 @@ exports[`webpack.config.js includes webpack-bundle-analyzer when using --analyze
       return isBlockAsset ? filenames.block : filenames.js;
     },
     "path": "/dist",
-    "publicPath": "/",
+    "publicPath": "/wp-content/themes/digitalsilk-theme/dist/",
   },
   "performance": {
     "hints": "warning",
@@ -958,6 +994,9 @@ exports[`webpack.config.js returns proper configs for package config with common
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -996,6 +1035,9 @@ exports[`webpack.config.js returns proper configs for package config with common
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -1033,6 +1075,9 @@ exports[`webpack.config.js returns proper configs for package config with common
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -1188,6 +1233,9 @@ exports[`webpack.config.js takes the --target option into account 1`] = `
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -1226,6 +1274,9 @@ exports[`webpack.config.js takes the --target option into account 1`] = `
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
@@ -1263,6 +1314,9 @@ exports[`webpack.config.js takes the --target option into account 1`] = `
               "implementation": "/node_modules/sass-embedded/dist/lib/index.js",
               "sassOptions": {
                 "quietDeps": true,
+                "silenceDeprecations": [
+                  "legacy-js-api",
+                ],
                 "suppressDeprecationWarnings": true,
               },
               "sourceMap": true,
