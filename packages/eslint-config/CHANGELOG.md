@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.4.4
+
+### Patch Changes
+
+-   update version
+-   Updated dependencies
+    -   @digitalsilk/babel-preset-default@1.4.4
+
 ## 1.4.3
 
 ### Patch Changes
