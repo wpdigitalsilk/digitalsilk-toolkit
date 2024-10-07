@@ -8,14 +8,19 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-const { resolve } = require('path');
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
+
 const RemoveEmptyScriptsPlugin = require('./plugins/remove-empty-scripts');
 const CleanExtractedDeps = require('./plugins/clean-extracted-deps');
 const DSToolkitTscPlugin = require('./plugins/tsc');
 const NoBrowserSyncPlugin = require('./plugins/no-browser-sync');
-
-const { hasStylelintConfig, fromConfigRoot, hasProjectFile, getArgFromCLI, maybeInsertStyleVersionHash } = require('../../utils');
+const {
+	hasStylelintConfig,
+	fromConfigRoot,
+	hasProjectFile,
+	getArgFromCLI,
+	maybeInsertStyleVersionHash,
+} = require('../../utils');
 const { isPackageInstalled } = require('../../utils/package');
 
 const removeDistFolder = (file) => {
@@ -26,7 +31,23 @@ const removeDistFolder = (file) => {
 // This ensures that the same reporter is used everywhere
 const webpackbarArguments = process.env.JEST_WORKER_ID !== undefined ? { reporters: ['basic'] } : undefined;
 
-module.exports = ({ isPackage, isProduction, projectConfig: { devServer, filenames, devURL, devServerPort, paths, wpDependencyExternals, analyze, hot, useBlockAssets }, packageConfig: { style }, buildFiles }) => {
+module.exports = ({
+	isPackage,
+	isProduction,
+	projectConfig: {
+		devServer,
+		filenames,
+		devURL,
+		devServerPort,
+		paths,
+		wpDependencyExternals,
+		analyze,
+		hot,
+		useBlockAssets,
+	},
+	packageConfig: { style },
+	buildFiles,
+}) => {
 	const hasReactFastRefresh = hot && !isProduction;
 
 	const hasBrowserSync = isPackageInstalled('browser-sync-webpack-plugin') && isPackageInstalled('browser-sync');
@@ -60,7 +81,7 @@ module.exports = ({ isPackage, isProduction, projectConfig: { devServer, filenam
 		);
 	}
 
-	const blocksSourceDirectory = resolve(process.cwd(), paths.blocksDir);
+	const blocksSourceDirectory = path.resolve(process.cwd(), paths.blocksDir);
 
 	return [
 		devServer &&
@@ -114,7 +135,8 @@ module.exports = ({ isPackage, isProduction, projectConfig: { devServer, filenam
 					if (useBlockAssets) {
 						isBlockAsset =
 							// match windows and posix paths
-							buildFiles[options.chunk.name].match(/\/blocks?\//) || buildFiles[options.chunk.name].match(/\\blocks?\\/);
+							buildFiles[options.chunk.name].match(/\/blocks?\//) ||
+							buildFiles[options.chunk.name].match(/\\blocks?\\/);
 					} else {
 						isBlockAsset = options.chunk.name.match(/-block$/);
 					}
