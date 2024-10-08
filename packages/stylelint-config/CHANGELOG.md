@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.5.0
+
+### Minor Changes
+
+-   Update
+
 ## 1.4.9
 
 ### Patch Changes

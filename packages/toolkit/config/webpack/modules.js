@@ -1,6 +1,4 @@
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
-const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
-
 const { hasBabelConfig, hasPostCSSConfig, fromConfigRoot } = require('../../utils');
 
 const getCSSLoaders = ({ options, postcss, sass }) => {
@@ -8,7 +6,7 @@ const getCSSLoaders = ({ options, postcss, sass }) => {
 	// This goes as Sass -> PostCSS -> CSS -> MiniCSSExtractPlugin
 	return [
 		{
-			loader: ExtractCssChunks.loader,
+			loader: MiniCSSExtractPlugin.loader,
 		},
 		{
 			loader: require.resolve('css-loader'),
